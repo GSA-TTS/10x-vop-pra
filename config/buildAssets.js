@@ -36,19 +36,25 @@ async function createAssetPaths() {
 
 esbuild
   .build({
-    entryPoints: ['styles/styles.scss', 'js/app.js', 'js/admin.js'],
+    entryPoints: ['_includes/theme/styles/index.scss', '_includes/theme/js/app.js', '_includes/theme/js/admin.js'],
     entryNames: '[dir]/[name]-[hash]',
     outdir: '_site/assets',
     format: 'iife',
     loader: {
-      '.png': 'dataurl',
-      '.svg': 'dataurl',
-      '.ttf': 'dataurl',
-      '.woff': 'dataurl',
-      '.woff2': 'dataurl',
+      '.jpg': 'file',
+      '.gif': 'file',
+      '.png': 'file',
+      '.webp': 'file',
+      '.svg': 'file',
+      '.ttf': 'file',
+      '.woff': 'file',
+      '.woff2': 'file',
     },
+    assetNames: 'assets/[name]-[hash]',
     minify: process.env.ELEVENTY_ENV === 'production',
     sourcemap: process.env.ELEVENTY_ENV !== 'production',
+    bundle: true, 
+    minifyWhitespace: true,
     target: ['chrome58', 'firefox57', 'safari11', 'edge18'],
     plugins: [sassPlugin({
       loadPaths: [

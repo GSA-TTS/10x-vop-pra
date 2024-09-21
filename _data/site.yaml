@@ -1,11 +1,9 @@
-title: Agency Name
-email: contact@example.gov
-description: >- # this means to ignore newlines
-  Agency Name (EAC) Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Aenean et sapien a leo auctor scelerisque quis nec magna. Sed dictum ante a risus vehicula facilisis.
+title: TTS PRA Navigator
+description: TTS PRA Navigator
+url: https://www.gsa.gov
 
 # Twitter handle. Only the handle, not the URL.
-twitter: 18F
+#twitter: 18F
 
 #################################################################
 #
@@ -54,20 +52,12 @@ ga:
 primary_navigation:
   - name: Home
     url: /
-  - name: Blog
-    url: /blog/
-  - name: Document
-    url: /document/
-  - name: Document with sidenav
-    url: /document-with-sidenav/
-  - name: Document submenu
-    children:
-      - name: Navigation link
-        url: "#main-content"
-      - name: Navigation link
-        url: "#main-content"
-      - name: Navigation link
-        url: "#main-content"
+  - name: Explore PRA
+    url: /explore-pra/
+  - name: Find out if you need PRA clearance
+    url: /find-out-if-you-need-pra/
+  - name: Get PRA clearance
+    url: /get-pra-clearance/
 
 secondary_navigation:
   - name: Secondary link
@@ -81,7 +71,6 @@ secondary_navigation:
 # 2. Add a new site.
 # 3. Add your site/affiliate name here.
 searchgov:
-
   # Only change this if you're using a CNAME. Learn more here: https://search.gov/manual/cname.html
   endpoint: https://search.usa.gov
 
@@ -97,7 +86,6 @@ searchgov:
   # This allows Search.gov to present relevant type-ahead search suggestions in your website's search box.
   # If you do not want to present search suggestions, set this value to false.
   suggestions: true
-
 ##########################################################################################
 # The values below here are more advanced and should only be
 # changed if you know what they do

@@ -1,0 +1,165 @@
+@use "uswds-core" as *;
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: color("violet-90");
+    font-size: size('body', 8);
+    line-height: lh('body', 5);
+    -webkit-font-smoothing: antialiased;
+    min-width: units('mobile');
+}
+
+.usa-app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#main-content {
+    flex: 1;
+    width: 100%;
+}
+
+h1 {
+    font-size: size('body', 14);
+    line-height: lh('heading', 2);
+}
+
+h2 {
+    font-size: size('body', 12);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: lh('heading', 2);
+}
+
+.usa-section {
+    padding-top: units(7);
+    padding-bottom: 0;
+
+    &:last-child {
+        padding-bottom: units(7);
+    }
+
+    &--dark {
+        padding: units(2);
+        background-color: color('blue-warm-70');
+    
+        h2 {
+            color: color('blue-warm-10v');
+        }
+
+        .intro {
+            color: color('gray-5');
+            font-size: size('body', 9);
+        }
+    }
+
+    &.border-section {
+        h2 {
+            margin-top: 0;
+            padding-top: units(3);
+            border-top: units(1px) solid color('gray-cool-50');
+        }
+    }
+}
+
+.usa-card__container {
+    border-width: 1px;
+    border-color: #dfe1e2;
+}
+
+.usa-card__img {
+    background-color: transparent;
+}
+
+.usa-card-group {
+    
+
+    .usa-card__img {
+        margin: 0 auto;
+    }
+}
+
+.usa-prose {
+
+    .usa-process-list {
+
+        .usa-process-list__item,
+        .usa-list li {
+            max-width: unset;
+        }
+
+    }
+}
+
+.usa-footer {
+    .usa-identifier__logo-img {
+        max-height: units(6);
+    }
+
+    .usa-footer__logo {
+        .grid-col-1 {
+            max-width: units(8);
+        }
+    }
+    
+}
+
+.usa-banner__content,
+.grid-container,
+.usa-header--extended .usa-navbar,
+.usa-header--extended .usa-nav__inner,
+.usa-banner__inner,
+.usa-identifier__container,
+.usa-footer__primary-container,
+.usa-footer>.grid-container,
+.usa-footer__secondary-section>.grid-container  {
+    max-width: units('widescreen');
+}
+
+.usa-in-page-nav {
+    margin-left: 0;
+    margin-right: 2rem;
+    margin-top: 0;
+    max-width: 15rem;
+    order: unset;
+
+    &__nav {
+        padding-top: 0;
+        padding-left: 0;
+    }
+}
+
+.usa-in-page-nav__item--primary {
+    font-weight: 400;
+}
+
+.usa-in-page-nav__list a:not(.usa-button).usa-current {
+    font-weight: 700;
+}
+
+/* Home Page */
+
+.homepage-wrapper {
+
+    .usa-card-group {
+
+        .usa-card__img {
+            max-width: 150px;
+        }
+    }
+
+    .overview-of-research-section {
+        padding-top: units(3);
+    }
+
+}

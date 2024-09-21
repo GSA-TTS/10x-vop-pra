@@ -1,21 +1,169 @@
 ---
 permalink: /
-layout: layouts/wide
+layout: layouts/page
 title: Home
+sidenav: true
 ---
 
-{% comment %}
-Welcome to official Federalist Jekyll template for the U.S Web Design System 2.0
-
-You'll notice that this page only makes reference to two other html files: hero.html and highlights.html
-
-To the edit the home page, you can edit those files directly, create new ones or add content directly to
-this page.
-
-We recommend splitting apart your site's components into their own smaller section so that its easier to
-manage in the long term.
-{% endcomment %}
-
-{% include "hero.html" %}
-{% include "tagline.html" %}
-{% include "highlights.html" %}
+<div class="homepage-wrapper">
+    <h1 class="margin-top-0">Technology Transformation Services PRA Navigator</h1>
+    <section class="usa-section usa-section--dark padding-2">
+        <h2 class="margin-top-1">Welcome to TTS PRA Navigator!</h2>
+        <p class="intro margin-bottom-1">TTS PRA Navigator helps guide UX Researchers to the right PRA information at
+            the right time. We're here to help you navigate PRA whenever you need to do user research here at TTS.</p>
+    </section>
+    <section class="usa-section get-started-section border-section">
+        <h2 class="site-preview-heading">Get started</h2>
+        <ul class="usa-card-group grid-row">
+            <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <h4 class="usa-card__heading">New to PRA?</h4>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/new-to-pra-icon.png' | url }}" alt=""
+                                width="150" height="150" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p>
+                            We recommend you begin by familiarizing yourself with the basics of PRA and how this law may
+                            affect you and your work as a researcher here at TTS.
+                        </p>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a href="#" class="usa-button">Explore PRA</a>
+                    </div>
+                </div>
+            </li>
+            <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <h4 class="usa-card__heading">Not sure if you need PRA clearance?</h4>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/not-sure-pra-icon.png' | url }}" alt=""
+                                width="150" height="150" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p>
+                            We can help you determine whether you need PRA clearance for your research or connect you
+                            with someone who can help.
+                        </p>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a href="#" class="usa-button">Find out</a>
+                    </div>
+                </div>
+            </li>
+            <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <h4 class="usa-card__heading">Ready to get PRA clearance?</h4>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/ready-for-pra-icon.png' | url }}" alt=""
+                                width="150" height="150" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p>
+                            If you already know you will need PRA clearance for your research, we can walk you through
+                            the steps to get it.
+                        </p>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a href="#" class="usa-button">Get PRA clearance</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="usa-section overview-of-research-section border-section">
+        <h2 class="site-preview-heading">Overview of the user research process at TTS</h2>
+        <ol class="usa-process-list">
+            <li class="usa-process-list__item">
+                <h4 id="create-research-plan" class="usa-process-list__heading">Create your research plan</h4>
+                <p class="margin-top-05">
+                    First, you need to plan your user research! Consider your goals and whether the research will be
+                    generative (defining direction or shape of a product) or evaluative (defining improvements and
+                    opportunities). To get started, 18F offers some useful guidance for <a
+                        class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://guides.18f.gov/ux-guide/resources/research-plan/">planning your
+                        research</a>.
+                </p>
+                <p><span class="text-bold">Recruit participants.</span> <i>If you already have participants, you can
+                        skip this
+                        step.</i>
+                    Decide who your participants will be and how you will recruit them. <a class="usa-link"
+                        href="{{ '/get-pra-clearance/' | url }}">Learn more about PRA considerations for
+                        RECRUITMENT</a>.</p>
+                <p><span class="text-bold">Decide on research method(s).</span> 18F offers guidance on <a
+                        class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://guides.18f.gov/methods/">how and when to use specific research
+                        methods</a>. In
+                    general, qualitative user research methods that involve direct observation and non-standardized
+                    conversations will likely not require PRA clearance. <a class="usa-link"
+                        href="{{ '/get-pra-clearance/' | url }}">Learn more about PRA considerations for RESEARCH</a>.
+                </p>
+            </li>
+            <li class="usa-process-list__item">
+                <h4 id="find-pra-clearance-need" class="usa-process-list__heading">Find out if you need PRA clearance
+                </h4>
+                <p class="margin-top-05">
+                    Depending on the nature of your research activities, you may need PRA clearance. The need for PRA
+                    clearance is determined by several factors, including:
+                </p>
+                <p><span class="text-bold">Who you will collect information from:</span> whether you will have 10 or
+                    more participants
+                    (over a 12 month period) and whether participants are members of the public or federal employees.
+                </p>
+                <p><span class="text-bold">How you will collect that information:</span> whether your research
+                    activities are
+                    "standardized" (i.e posing a set of "identical questions") and whether your research activities
+                    involve "direct observation" (i.e. "visual inspection" of participant activities)</p>
+                <p>This section will help you find out whether your recruitment and/or research activities require
+                    clearance, or connect you with someone who can help you answer that question, if further
+                    clarification is needed. <a class="usa-link" href="{{ '/get-pra-clearance/' | url }}">Find out if
+                        you need PRA
+                        clearance for recruitment, research, or both.</a></p>
+            </li>
+            <li class="usa-process-list__item">
+                <h4 id="get-pra-clearance" class="usa-process-list__heading">Get PRA clearance (if needed)</h4>
+                <p class="margin-top-05">
+                    If you do need to get PRA clearance, never fear! Most qualitative user research activities at TTS
+                    will be able to go through the Fast-Track process (also known as A-11 Section 280), which generally
+                    takes 1-2 weeks.
+                </p>
+                <p class="text-bold">Fast-Track (A-11 Section 280) process overview</p>
+                <ol class="usa-list margin-top-05">
+                    <li><span class="text-bold">Build a clearance request package.</span> Fill out an Information
+                        Collection Request (ICR) form with
+                        details of
+                        your research activities and attach any relevant documents.</li>
+                    <li><span class="text-bold">Send for pre-review.</span> Send the completed package to OMB's CX PRA
+                        Desk Officer for pre-review.
+                    </li>
+                    <li><span class="text-bold">Make edits.</span> Make any necessary edits to the package.</li>
+                    <li><span class="text-bold">Send for final review.</span> Submit finalized package to GSA's PRA Desk
+                        Officer.</li>
+                    <li><span class="text-bold">Get approval.</span> A PRA Reviewer at OMB will review your request and
+                        approve it.</li>
+                </ol>
+                <p><a class="usa-link" href="{{ '/get-pra-clearance/' | url }}">Find out how to get PRA clearance.</a>
+                </p>
+            </li>
+            <li class="usa-process-list__item">
+                <h4 id="get-pra-clearance" class="usa-process-list__heading">Do research!</h4>
+                <p class="margin-top-05">
+                    Once you get PRA clearance, you are free to proceed with your research. Thank you for what you do to
+                    improve government digital services, and happy connecting with the public!
+                </p>
+            </li>
+        </ol>
+    </section>
+</div>

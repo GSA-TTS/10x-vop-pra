@@ -1,5 +1,8 @@
 const { DateTime } = require('luxon');
 const fs = require('fs');
+
+const UglifyJS = require("uglify-js");
+const htmlmin = require("html-minifier");
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 const markdownIt = require('markdown-it');
@@ -12,11 +15,36 @@ module.exports = function (config) {
   // Set pathPrefix for site
   let pathPrefix = '/';
 
+  // Minify inline (not imported) JS
+  config.addFilter("jsmin", function (code) {
+    let minified = UglifyJS.minify(code);
+    if (minified.error) {
+      console.log("UglifyJS error: ", minified.error);
+      return code;
+    }
+    return minified.code;
+  });
+
+  // Minify HTML output
+  config.addTransform("htmlmin", function (content, outputPath) {
+    if (outputPath && outputPath.indexOf(".html") > -1) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+    return content;
+  });
+
   // Copy the `admin` folders to the output
   config.addPassthroughCopy('admin');
 
   // Copy USWDS init JS so we can load it in HEAD to prevent banner flashing
   config.addPassthroughCopy({'./node_modules/@uswds/uswds/dist/js/uswds-init.js': 'assets/js/uswds-init.js'});
+  config.addPassthroughCopy({'./node_modules/@uswds/uswds/dist/img/': 'assets/uswds/img'});
+  config.addPassthroughCopy({'_includes/theme/images': 'assets/images'});
 
   // Add plugins
   config.addPlugin(pluginRss);

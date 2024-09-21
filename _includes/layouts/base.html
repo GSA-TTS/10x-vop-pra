@@ -9,22 +9,27 @@ The home page uses wide.html layout, since it extends full width of page
 
 {% include "meta.html" %}
 
-<body>
-  {% include "header.html" %}
+<body id="top">
 
-  {% include "menu.html" primary_navigation: site.primary_navigation secondary_navigation: site.secondary_navigation %}
+  <div class="usa-app {% if theme %}usa-app__theme-{{ theme }}{% endif %}">
+    {% include "header.html" %}
 
-  {{ content }}
+    {% include "menu.html" primary_navigation: site.primary_navigation secondary_navigation: site.secondary_navigation
+    %}
 
-  {% include "footer.html" %}
+    {{ content }}
 
-  {% comment %} Hide SVG Sprites {% endcomment %}
-  <div style="display: none;">
-    {% usa_icons_sprite %}
-    {% uswds_icons_sprite %}
+    {% include "footer.html" %}
+
+    {% comment %} Hide SVG Sprites {% endcomment %}
+    <div style="display: none;">
+      {% usa_icons_sprite %}
+      {% uswds_icons_sprite %}
+    </div>
+
+    {% include "scripts.html" %}
   </div>
 
-  {% include "scripts.html" %}
 </body>
 
 </html>
