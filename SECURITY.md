@@ -1,18 +1,31 @@
+# Security Policy
 
-**Reporting Security Issues**
+As a U.S. Government agency, the General Services Administration (GSA) takes
+seriously our responsibility to protect the public's information, including
+financial and personal information, from unwarranted disclosure.
 
-Please refrain from reporting security vulnerabilities through public GitHub issues.
+## Reporting a Vulnerability
 
-Instead, kindly report them via the information provided in [cloud.gov's security.txt](https://cloud.gov/.well-known/security.txt).
+Services operated by the U.S. General Services Administration (GSA)
+are covered by the **GSA Vulnerability Disclosure Program (VDP)**.
 
-When reporting, include the following details (as much as possible) to help us understand the nature and extent of the potential issue:
+See the [GSA Vulnerability Disclosure Policy at https://www.gsa.gov/vulnerability-disclosure-policy](https://gsa.gov/vulnerability-disclosure-policy)
+for details including:
 
-- Type of issue (e.g., buffer overflow, SQL injection, cross-site scripting, etc.)
-- Full paths of related source file(s)
-- Location of affected source code (tag/branch/commit or direct URL)
-- Any special configuration required to reproduce the issue
-- Step-by-step instructions to reproduce the issue
-- Proof-of-concept or exploit code (if available)
-- Impact of the issue, including potential exploitation by attackers
+* How to submit a report if you believe you have discovered a vulnerability.
+* Bug bounty scope.
+* GSA's coordinated disclosure policy.
+* Information on how you may conduct security research on GSA developed
+  software and systems.
+* Important legal and policy guidance.
 
-Providing this information will facilitate a quicker triage of your report.
+## Supported Versions
+
+Please note that only certain branches are supported with security updates.
+
+| Version (Branch) | Supported          |
+| ---------------- | ------------------ |
+| main             | :white_check_mark: |
+| other            | :x:                |
+
+When using this code or reporting vulnerabilities please only use supported versions.
