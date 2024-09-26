@@ -1,10 +1,6 @@
 ---
 title: Explore PRA
 permalink: /explore-pra/
-layout: layouts/page
+layout: layouts/explore-pra-page
 sidenav: true
 ---
-
-## Explore PRA
-
-Content coming soon.
