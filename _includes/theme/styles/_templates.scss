@@ -71,7 +71,8 @@ h4 {
         }
     }
 
-    &.what-is-pra-section-section {
+    &.what-is-pra-section-section,
+    &.more-information-section {
         padding-top: units(2);
     }
 }
@@ -105,7 +106,16 @@ h4 {
         .usa-list li {
             max-width: unset;
         }
+    }
 
+    &>table {
+        th {
+            padding: units(2);
+        }
+
+        caption {
+            margin-bottom: units(0.5);
+        }
     }
 }
 
@@ -131,14 +141,14 @@ h4 {
 .usa-footer__primary-container,
 .usa-footer>.grid-container,
 .usa-footer__secondary-section>.grid-container  {
-    max-width: units('widescreen');
+    max-width: units('desktop-lg');
 }
 
 .usa-in-page-nav {
-    margin-left: 0;
     margin-right: 2rem;
     margin-top: 0;
     max-width: 15rem;
+    min-width: 13.75rem;
     order: unset;
 
     &__nav {
@@ -153,6 +163,41 @@ h4 {
 
 .usa-in-page-nav__list a:not(.usa-button).usa-current {
     font-weight: 700;
+}
+
+.usa-accordion {
+    .usa-prose>p {
+        max-width: none;
+    }
+
+    &__content>*:last-child {
+        margin-bottom: units(3);
+    }
+}
+
+.usa-accordion__heading, 
+.usa-prose .usa-accordion__heading {
+    font-size: size('body', 9)
+}
+
+.usa-table {
+    th,
+    td {
+        vertical-align: top;
+    }
+
+    th {
+        padding: units(2);
+    }
+
+    ul {
+        margin-top: 0;
+    }
+}
+
+.usa-prose>table thead th, 
+.usa-prose>table thead td {
+    background-color: color('blue-warm-5');
 }
 
 /* Home Page */

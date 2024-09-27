@@ -46,7 +46,7 @@ dap:
 
 # Configuration for Google Analytics
 ga:
-  # ua: your-ua
+  ua: G-HPBJM50N26
 
 # Site Navigation
 primary_navigation:
