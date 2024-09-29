@@ -1,10 +1,6 @@
 ---
 title: Get PRA clearance
 permalink: /get-pra-clearance/
-layout: layouts/page
+layout: layouts/get-pra-clearance
 sidenav: true
 ---
-
-## Get PRA clearance
-
-Content coming soon.

@@ -41,6 +41,14 @@ h4 {
     line-height: lh('heading', 2);
 }
 
+.usa-header {
+    &--extended  {
+        .usa-nav {
+            border-top-width: units(2px);
+        }
+    }
+}
+
 .usa-section {
     padding-top: units(7);
     padding-bottom: 0;
@@ -74,6 +82,11 @@ h4 {
     &.what-is-pra-section-section,
     &.more-information-section {
         padding-top: units(2);
+    }
+
+    &.usa-layout-docs {
+        min-height: 40vh;
+        border-top: none;
     }
 }
 
