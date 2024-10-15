@@ -9,6 +9,7 @@ html {
 body {
     color: color("violet-90");
     font-size: size('body', 8);
+    font-family: family('sans');
     line-height: lh('body', 5);
     -webkit-font-smoothing: antialiased;
     min-width: units('mobile');
@@ -42,7 +43,7 @@ h4 {
 }
 
 .usa-header {
-    &--extended  {
+    &--extended {
         .usa-nav {
             border-top-width: units(2px);
         }
@@ -60,7 +61,7 @@ h4 {
     &--dark {
         padding: units(2);
         background-color: color('blue-warm-70');
-    
+
         h2 {
             color: color('blue-warm-10v');
         }
@@ -95,15 +96,18 @@ h4 {
     border-color: #dfe1e2;
 }
 
-.usa-card__img {
-    background-color: transparent;
-}
-
 .usa-card-group {
-    
 
     .usa-card__img {
+        background-color: transparent;
+        max-width: 9.375rem;
         margin: 0 auto;
+    }
+}
+
+.usa-card__footer {
+    .usa-link--external::after {
+        margin-top: 0;
     }
 }
 
@@ -142,7 +146,7 @@ h4 {
             max-width: units(8);
         }
     }
-    
+
 }
 
 .usa-banner__content,
@@ -153,7 +157,7 @@ h4 {
 .usa-identifier__container,
 .usa-footer__primary-container,
 .usa-footer>.grid-container,
-.usa-footer__secondary-section>.grid-container  {
+.usa-footer__secondary-section>.grid-container {
     max-width: units('desktop-lg');
 }
 
@@ -188,7 +192,7 @@ h4 {
     }
 }
 
-.usa-accordion__heading, 
+.usa-accordion__heading,
 .usa-prose .usa-accordion__heading {
     font-size: size('body', 9)
 }
@@ -206,26 +210,235 @@ h4 {
     ul {
         margin-top: 0;
     }
-}
 
-.usa-prose>table thead th, 
-.usa-prose>table thead td {
-    background-color: color('blue-warm-5');
+    thead th,
+    thead td {
+        background-color: color('blue-warm-5');
+    }
 }
 
 /* Home Page */
 
 .homepage-wrapper {
+    .overview-of-research-section {
+        padding-top: units(3);
+    }
+}
+
+/* Quotes Slider */
+.quote-slider {
+    position: relative;
+    overflow: hidden;
+    // min-height: 18.5rem;
+}
+
+.slides-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+    margin-right: units(0.5);
+    padding: 0 units(2) units(3) units(1);
+
+    @include at-media("tablet") {
+        padding: 0 units(2) units(3) units(3);    
+    }   
+
+    blockquote {
+        width: 97%;
+        border: units(1px) solid color('gray-20');
+        border-radius: units(1);
+        padding: units(2) units(2) units(2) units(4);
+        font-style: italic;
+        margin: 0;
+        position: relative;
+        -webkit-box-shadow: units(0.5) units(0.5) units(1) 0px color('gray-20');
+        -moz-box-shadow: units(0.5) units(0.5) units(1) 0px color('gray-20');
+        box-shadow: units(0.5) units(0.5) units(1) 0px color('gray-20');
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: units(2);
+            top: units(2);
+            bottom: units(2);
+            width: 4px;
+            /* Thickness of the vertical line */
+            background-color: #ccc;
+            /* Color of the vertical line */
+            border-radius: 2px;
+            /* Rounded vertical line */
+        }
+    }
+}
+
+.slider-controls {
+    text-align: center;
+    padding-bottom: units(2);
+}
+
+.prev,
+.next,
+.dot-nav-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    width: auto;
+    color: color('gray-80');
+    user-select: none;
+    padding: 0 units(2);
+    font-size: units(5);
+
+    @include at-media("tablet") {
+        font-size: units(3); 
+    }  
+}
+
+.prev:hover,
+.next:hover {
+    color: color('gray-90');
+}
+
+.prev,
+.next,
+.dot-nav-container {
+    line-height: units(2);
+}
+
+.dot-nav-container {
+    text-align: center;
+    padding: 0;
+    margin: 0 units(1);
+}
+
+.dot-nav {
+    cursor: pointer;
+    display: inline-block;
+    padding: units(1);
+
+    span {
+        display: block;
+        height: units(3);
+        width: units(3);
+        margin: 0 units(2px);
+        background-color: color('gray-40');
+        border-radius: 50%;
+        transition: background-color 0.6s ease;
+
+        .usa-sr-only {
+            background: white;
+        }
+        
+        @include at-media("tablet") {
+            height: units(1);
+            width: units(1);
+        } 
+    }
+}
+
+.dot-nav.active span,
+.dot-nav:hover span {
+    background-color: color('gray-90');
+}
+
+iframe:focus,
+[href]:focus,
+[tabindex]:focus,
+[contentEditable=true]:focus {
+    outline: units(2px) solid color('blue-60v');
+}
+
+/* Question Boxes */
+
+.questions-box {
+    max-width: none;
+    border-radius: units(0.5);
+    background: color('blue-warm-70');
+    padding: units(3);
+    margin-bottom: units(4);
+
+    h3,
+    h4 {
+        color: color('gray-5');
+    }
+
+    h3,
+    legend {
+        margin-top: 0;
+    }
+
+    fieldset {   
+        border-radius: units(1);
+
+        .usa-radio {
+            background: none;
+        }
+    }
+
+    .usa-legend {
+        max-width: none;
+        margin-top: units(1.5);
+    }
+
+    fieldset,
+    .quidance-container {
+        padding: units(2);
+        margin-bottom: units(2);
+    }
+
+    fieldset,
+    .guidance-gray {
+        background: color('gray-5');
+    }
+
+    .guidance-gray {
+        color: color('gray-cool-60');
+        text-align: center;
+        text-transform: uppercase;
+        padding: units(5);
+        font-weight: 600;
+    }
+    
+    .guidance-yellow {
+        background-color: color('yellow-5');
+        border-left: units(1) solid color('gold-20v');
+    }
+    
+    .guidance-green {
+        background-color: color('green-cool-5');
+        border-left: units(1) solid color('green-cool-40v');
+    }
+
+    .usa-button {
+        &:hover {
+            color: color('blue-10');
+        }
+    }
+    
+}
+
+.common-research-methods-section {
 
     .usa-card-group {
 
         .usa-card__img {
-            max-width: 150px;
+            max-width: 6rem;
         }
     }
 
-    .overview-of-research-section {
-        padding-top: units(3);
-    }
-
 }
+

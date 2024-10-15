@@ -1,35 +1,23 @@
-{% comment %}
-You shouldn't have to edit this page very often. But if you want
-to modify some of the meta-data for the site, this is the place to do it.
-{% endcomment %}
-
 <head>
-  <!-- Basic Page Needs
-    ================================================== -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Specific Metas
-    ================================================== -->
+
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Title and meta description
-    ================================================== -->
+
   <title>{{- title }} | {{ site.title -}}</title>
   <meta property="og:title" content="{{- title }} | {{ site.title -}}" />
   <meta name="description" content="{{- description }} {{ site.description }}">
   <meta property="og:description" content="{{- description -}}" />
   <meta property="og:locale" content="en_US" />
-
   <link rel="canonical" href="{{- site.url -}}{{- page.url | url -}}" />
   <meta property="og:url" content="{{- site.url -}}{{- page.url | url -}}" />
-
   <meta property="og:type" content="article" />
   <meta content="summary_large_image" name="twitter:card">
 
   <script async="" src="{{ assetPaths['uswds.js'] }} "></script>
-  <!-- CSS
-    ================================================== -->
+
   <link rel="preload" as="style" href="{{ assetPaths['index.css'] }}" />
   <link rel="stylesheet" href="{{ assetPaths['index.css'] }}" type="text/css" />
 </head>

@@ -1,1 +1,1 @@
-require('@uswds/uswds');
+require("@uswds/uswds");
