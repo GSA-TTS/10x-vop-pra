@@ -49,11 +49,13 @@ layout: layouts/page
     (function() {
         const modal=document.querySelector('#disclaimer-modal-1');
         let overlay=document.getElementsByClassName("usa-modal-overlay");
+        const bodyContent = document.querySelector('.usa-app');
+        const nonModals = document.querySelectorAll('body > *:not(.usa-modal-wrapper)');
         const openButton=document.querySelector('[data-open-modal]');
 
         // Function to add inert attribute when modal is open
         const addInert=() => {
-            document.querySelectorAll('body > *:not(.usa-modal-wrapper)').forEach(el => {
+            nonModals.forEach(el => {
                 el.setAttribute('inert','true');
             });
         };
@@ -65,7 +67,11 @@ layout: layouts/page
             });
         };
 
-        openButton.addEventListener('click',addInert);
+        //openButton.addEventListener('click',addInert);
+
+        openButton.addEventListener('click',function(event) {
+            addInert();        
+        });
 
         // Listen for the closing event
         modal.addEventListener('click',function(event) {
@@ -77,6 +83,10 @@ layout: layouts/page
         window.addEventListener('load',(event) => {
             overlay[0].addEventListener('click',function(event) {
                 removeInert();
+            });
+
+            openButton.addEventListener('click',function(event) {
+                bodyContent.removeAttribute('aria-hidden');        
             });
         });
     })();
