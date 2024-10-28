@@ -395,7 +395,8 @@ iframe:focus,
 
     .usa-legend {
         max-width: none;
-        margin-top: units(1.5);
+        margin: units(1.5) 0;
+        padding-right: 0;
     }
 
     fieldset,
@@ -407,6 +408,12 @@ iframe:focus,
     fieldset,
     .guidance-gray {
         background: color('gray-5');
+    }
+
+    .yesNoWrapper {
+        @include at-media("tablet") {
+            text-align: right;
+        }        
     }
 
     .guidance-gray {
