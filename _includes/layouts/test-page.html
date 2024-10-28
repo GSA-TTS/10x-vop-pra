@@ -15,9 +15,9 @@ layout: layouts/page
                         Are you sure you want to continue?
                     </h2>
                     <div class="usa-prose">
-                        <p id="modal-1-description">
-                            You have unsaved changes that will be lost.
-                        </p>
+                        <div id="modal-1-description">
+                            <iframe src="https://docs.google.com/viewer?url={{ '/assets/documents/DHS-Supporting-Statement-DHS_A-11-Section-280-Improving-Customer-Experience-12-5-23.docx' | fullUrl }}&embedded=true" width="100%" height="500px"></iframe>
+                        </div>
                     </div>
                     <div class="usa-modal__footer">
                         <ul class="usa-button-group">
@@ -45,49 +45,11 @@ layout: layouts/page
         </div>
     </div>
 </div>
+{% capture modalFixJs %}
+{% include "_includes/theme/js/modalFix.js" %}
+{% endcapture %}
+
 <script>
-    (function() {
-        const modal=document.querySelector('#disclaimer-modal-1');
-        let overlay=document.getElementsByClassName("usa-modal-overlay");
-        const bodyContent = document.querySelector('.usa-app');
-        const nonModals = document.querySelectorAll('body > *:not(.usa-modal-wrapper)');
-        const openButton=document.querySelector('[data-open-modal]');
-
-        // Function to add inert attribute when modal is open
-        const addInert=() => {
-            nonModals.forEach(el => {
-                el.setAttribute('inert','true');
-            });
-        };
-
-        // Function to remove inert attribute when modal is closed
-        const removeInert=() => {
-            document.querySelectorAll('[inert]').forEach(el => {
-                el.removeAttribute('inert');
-            });
-        };
-
-        //openButton.addEventListener('click',addInert);
-
-        openButton.addEventListener('click',function(event) {
-            addInert();        
-        });
-
-        // Listen for the closing event
-        modal.addEventListener('click',function(event) {
-            if(!modal.classList.contains('is-visible')) {
-                removeInert();
-            }
-        });
-
-        window.addEventListener('load',(event) => {
-            overlay[0].addEventListener('click',function(event) {
-                removeInert();
-            });
-
-            openButton.addEventListener('click',function(event) {
-                bodyContent.removeAttribute('aria-hidden');        
-            });
-        });
-    })();
+    // Modal Fix
+    {{ modalFixJs | jsmin }}
 </script>

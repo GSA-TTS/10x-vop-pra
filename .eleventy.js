@@ -10,10 +10,14 @@ const markdownItAnchor = require("markdown-it-anchor");
 const yaml = require("js-yaml");
 const svgSprite = require("eleventy-plugin-svg-sprite");
 const { imageShortcode, imageWithClassShortcode } = require("./config");
+const fullUrlFilter = require('./_filters/fullUrl.js');
 
 module.exports = function (config) {
   // Set pathPrefix for site
   let pathPrefix = "/";
+
+  // Register the custom fullUrl filter
+  fullUrlFilter(config);
 
   // Minify inline (not imported) JS
   config.addFilter("jsmin", function (code) {
@@ -51,6 +55,7 @@ module.exports = function (config) {
   });
   config.addPassthroughCopy({ "_includes/theme/images": "assets/images" });
   config.addPassthroughCopy({ "_includes/theme/js": "assets/js" });
+  config.addPassthroughCopy({ "_includes/theme/documents": "assets/documents" });
 
   // Add plugins
   config.addPlugin(pluginRss);

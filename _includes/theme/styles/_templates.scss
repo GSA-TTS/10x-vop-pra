@@ -15,6 +15,10 @@ body {
     min-width: units('mobile');
 }
 
+img {
+    height: auto;
+}
+
 .usa-app {
     display: flex;
     min-height: 100vh;
@@ -51,11 +55,11 @@ h4 {
 }
 
 .usa-section {
-    padding-top: units(7);
+    padding-top: units(6);
     padding-bottom: 0;
 
     &:last-child {
-        padding-bottom: units(7);
+        padding-bottom: units(6);
     }
 
     &--dark {
@@ -440,6 +444,10 @@ iframe:focus,
         }
     }
 
+}
+
+.usa-modal {
+    max-width: 50rem;
 }
 
 .usa-modal-wrapper {
