@@ -17,7 +17,8 @@
             const relativePath=iframe.getAttribute('data-dynamic-src');
             if(relativePath.startsWith('/')) {
                 // Construct the full URL without encoding
-                const fullUrl=`${baseUrl}${relativePath}`;
+                const encodedRelativePath = encodeURIComponent(relativePath);
+                const fullUrl=`${baseUrl}${encodedRelativePath}`;
                 const googleViewerUrl=`https://docs.google.com/viewer?url=${fullUrl}&embedded=true`;
                 iframe.src=googleViewerUrl;
             }
