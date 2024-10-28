@@ -211,9 +211,10 @@ layout: layouts/page
                     <div id="modal-1-description">
                         <p>Preview the form below or download if you are ready to fill it out.</p>
                         <p class="margin-bottom-4">
-                            <a href="{{ '/assets/documents/DHS-Supporting-Statement-DHS_A-11-Section-280-Improving-Customer-Experience-12-5-23.docx' | fullUrl }}" class="usa-button">Download template</a>
+                            <a href="{{ '/assets/documents/DHS-Supporting-Statement-DHS_A-11-Section-280-Improving-Customer-Experience-12-5-23.docx' | url }}" class="usa-button dynamic-base-url">Download template</a>
                         </p>
-                        <iframe src="https://docs.google.com/viewer?url=https://www.reginfo.gov/public/do/DownloadDocument?objectID=147605301&embedded=true" width="100%" height="600"></iframe>
+                        <!-- This iframe content only loads in the cloud and not locally because it's a relative path -->
+                        <iframe data-dynamic-src="{{ '/assets/documents/DHS-Supporting-Statement-DHS_A-11-Section-280-Improving-Customer-Experience-12-5-23.docx' | url }}" width="100%" height="600"></iframe>
                     </div>
                 </div>
             </div>
@@ -230,7 +231,14 @@ layout: layouts/page
 {% include "_includes/theme/js/modalFix.js" %}
 {% endcapture %}
 
+{% capture baseUrl %}
+{% include "_includes/theme/js/base-url.js" %}
+{% endcapture %}
+
 <script>
     // Modal Fix
     {{ modalFixJs | jsmin }}
+
+    // Base URL
+    {{ baseUrl | jsmin }}
 </script>
