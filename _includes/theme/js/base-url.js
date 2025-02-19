@@ -19,7 +19,7 @@
                 // Construct the full URL without encoding
                 const encodedRelativePath = encodeURIComponent(relativePath);
                 const fullUrl=`${baseUrl}${encodedRelativePath}`;
-                const googleViewerUrl=`https://docs.google.com/viewer?url=${fullUrl}&embedded=true`;
+                const googleViewerUrl=`https://docs.google.com/gview?url=${fullUrl}&embedded=true`;
                 iframe.src=googleViewerUrl;
             }
         });

@@ -11,6 +11,7 @@ const yaml = require("js-yaml");
 const svgSprite = require("eleventy-plugin-svg-sprite");
 const { imageShortcode, imageWithClassShortcode } = require("./config");
 const fullUrlFilter = require('./_filters/fullUrl.js');
+const generalPlugin = require("./config/generalPlugin.js");
 
 module.exports = function (config) {
   // Set pathPrefix for site
@@ -42,10 +43,7 @@ module.exports = function (config) {
     return content;
   });
 
-  // Copy the `admin` folders to the output
   config.addPassthroughCopy("admin");
-
-  // Copy USWDS init JS so we can load it in HEAD to prevent banner flashing
   config.addPassthroughCopy({
     "./node_modules/@uswds/uswds/dist/js/uswds-init.js":
       "assets/js/uswds-init.js",
@@ -53,13 +51,28 @@ module.exports = function (config) {
   config.addPassthroughCopy({
     "./node_modules/@uswds/uswds/dist/img/": "assets/uswds/img",
   });
+  config.addPassthroughCopy({
+    "./node_modules/docxtemplater/": "assets/docxtemplater",
+  });
+  config.addPassthroughCopy({
+    "./node_modules/docxtemplater/build/": "assets/docxtemplater/build/",
+  });
+  config.addPassthroughCopy({
+    "./node_modules/pizzip/dist/": "assets/pizzip/dist/",
+  });
+  config.addPassthroughCopy({
+    "./node_modules/docx2pdf-converter/": "assets/docx2pdf-converter/",
+  });
   config.addPassthroughCopy({ "_includes/theme/images": "assets/images" });
   config.addPassthroughCopy({ "_includes/theme/js": "assets/js" });
   config.addPassthroughCopy({ "_includes/theme/documents": "assets/documents" });
+  config.addPassthroughCopy({ "_includes/theme/templates": "assets/templates" });
+  config.addPassthroughCopy({ "uploads": "uploads" });
 
   // Add plugins
   config.addPlugin(pluginRss);
   config.addPlugin(pluginNavigation);
+  config.addPlugin(generalPlugin);
 
   //// SVG Sprite Plugin for USWDS USWDS icons
   config.addPlugin(svgSprite, {
@@ -77,6 +90,7 @@ module.exports = function (config) {
 
   // Allow yaml to be used in the _data dir
   config.addDataExtension("yaml", (contents) => yaml.load(contents));
+  config.addDataExtension("yml", (contents) => yaml.load(contents));
 
   config.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(

@@ -1,0 +1,16 @@
+applications:
+- name: pra-app
+  buildpacks:
+    - nodejs_buildpack
+  memory: 256M
+  disk_quota: 512M
+  instances: 1
+  random-route: true
+  command: node server.js
+  env:
+    S3_BUCKET_NAME: pra-navigator-storage
+    S3_ENDPOINT: s3-fips.us-gov-west-1.amazonaws.com
+    S3_REGION: us-gov-west-1
+  services:
+    - pra-navigator-storage
+    - pra-form-progress

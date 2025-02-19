@@ -1,0 +1,90 @@
+# Site Navigation
+primary:
+  - text: Home
+    topnavcondense: false
+    href: /
+    url: /
+    main-file-path: /
+  - text: Getting started
+    subnav-alt: Getting started
+    sub:
+      - Getting started
+    icon: new-to-pra-icon-small.webp    
+    topnavcondense: false
+    href: /#getting-started
+    main-file-path: /getting-started/
+    children:
+      - text: Introduction to PRA
+        url: getting-started/#introduction-to-pra
+        blurb: Start here if you’re new to government or the PRA.
+        internal: true
+      - text: Process overview
+        url: getting-started/#overview-of-pra-considerations-for-ux-research
+        blurb: Overview of PRA implications at each step of the research process.
+        internal: true
+  - text: Determining if you need PRA clearance
+    subnav-alt: Determining if you need PRA clearance
+    sub:
+      - Determining if you need PRA clearance
+    icon: not-sure-pra-icon-small.webp   
+    topnavcondense: false
+    href: /#find-out-if-you-need-pra
+    main-file-path: /find-out-if-you-need-pra/
+    children:
+      - text: Take a quiz
+        url: find-out-if-you-need-pra/#take-a-quiz
+        blurb: Take a short quiz to determine if your research needs clearance.
+        internal: true
+      - text: PRA exemptions
+        url: find-out-if-you-need-pra/#pra-exemptions
+        blurb: Common research scenarios that do NOT need PRA clearance.
+        internal: true
+      - text: PRA for recruitment
+        url: find-out-if-you-need-pra/#pra-for-recruitment
+        blurb: PRA implications for recruitment methods, like screener surveys.
+        internal: true
+      - text: PRA for research
+        url: find-out-if-you-need-pra/#pra-for-research
+        blurb: PRA implications for common research methods.
+        internal: true
+      - text: Example scenarios
+        url: find-out-if-you-need-pra/#example-scenarios
+        blurb: View examples of research scenarios and PRA implications.
+        internal: true
+  - text: Getting Fast Track PRA clearance
+    subnav-alt: Getting Fast Track PRA clearance
+    sub:
+      - ICR Form Builder
+    icon: ready-for-pra-icon-small.webp
+    topnavcondense: false
+    href: /#get-pra-clearance
+    main-file-path: /get-pra-clearance/
+    children:
+      - text: Information about Fast Track
+        url: get-pra-clearance/#information-about-fast-track
+        blurb: Start here if you’re new to government or the PRA.
+        internal: true
+      - text: How to get Fast Track clearance
+        url: get-pra-clearance/#how-to-get-fast-track-clearance
+        blurb: An outline of Fast Track steps and timeline.
+        internal: true
+      - text: Making changes to approved research
+        url: get-pra-clearance/#making-changes-to-approved-research
+        blurb: How to submit changes to research with existing clearance.
+        internal: true
+      - text: Clearance for multi-lingual research
+        url: get-pra-clearance/#clearance-for-multilingual-research
+        blurb: How to get clearance for research in other languages.
+        internal: true
+      - text: Working with a partner agency
+        url: get-pra-clearance/#working-with-a-partner-agency
+        blurb: A guide for consultants working with agencies outside of GSA.
+        internal: true
+  - text: ICR Form Builder
+    href: /#icr-form-builder
+    main-file-path: /icr-form-builder/
+    topnavcondense: Getting Fast Track PRA clearance
+    children:
+      - text: Launch ICR Form Builder
+        url: /icr-form-builder/
+        internal: true

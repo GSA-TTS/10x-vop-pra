@@ -21,9 +21,11 @@
         });
     };
 
-    openButton.addEventListener('click',function(event) {
-        addInert();        
-    });
+    if ( openButton ) {
+        openButton.addEventListener('click',function(event) {
+            addInert();        
+        });
+    }
 
     // Listen for the closing event
     modal.addEventListener('click',function(event) {
@@ -37,8 +39,10 @@
             removeInert();
         });
 
-        openButton.addEventListener('click',function(event) {
-            bodyContent.removeAttribute('aria-hidden');        
-        });
+        if ( openButton ) {
+            openButton.addEventListener('click',function(event) {
+                bodyContent.removeAttribute('aria-hidden');        
+            });
+        }
     });
 })();

@@ -1,0 +1,8 @@
+[build]
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"  # Choose a bundler to optimize your functions
+  directory = "netlify/functions"
+  included_files = ["node_modules/docx2pdf-converter/convert.sh"]
+

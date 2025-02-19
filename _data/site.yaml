@@ -1,6 +1,6 @@
-title: TTS PRA Navigator
-description: TTS PRA Navigator
-url: https://www.gsa.gov
+title: PRA Navigator
+description: PRA Navigator
+url: https://federalist-ed45f93b-f174-4670-8752-8fcef170bc2d.sites.pages.cloud.gov/site/gsa-tts/10x-vop-pra/
 
 # Twitter handle. Only the handle, not the URL.
 #twitter: 18F
@@ -48,23 +48,6 @@ dap:
 ga:
   ua: G-HPBJM50N26
 
-# Site Navigation
-primary_navigation:
-  - name: Home
-    url: /
-  - name: Explore PRA
-    url: /explore-pra/
-  - name: Find out if you need PRA clearance
-    url: /find-out-if-you-need-pra/
-  - name: Get PRA clearance
-    url: /get-pra-clearance/
-
-secondary_navigation:
-  - name: Secondary link
-    url: "#main-content"
-  - name: Another secondary link
-    url: "#main-content"
-
 # Search.gov configuration
 #
 # 1. Create an account with Search.gov https://search.usa.gov/signup
@@ -75,13 +58,10 @@ searchgov:
   endpoint: https://search.usa.gov
 
   # Replace this with your search.gov account.
-  affiliate: federalist-uswds-example
-
-  # Replace this with your access key.
-  access_key: xX1gtb2RcnLbIYkHAcB6IaTRr4ZfN-p16ofcyUebeko=
+  affiliate: pra-navigator
 
   # This renders the results within the page instead of sending to user to search.gov.
-  inline: true
+  inline: false
 
   # This allows Search.gov to present relevant type-ahead search suggestions in your website's search box.
   # If you do not want to present search suggestions, set this value to false.

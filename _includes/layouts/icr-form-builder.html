@@ -1,0 +1,362 @@
+---
+layout: layouts/page
+---
+<script src="{{ '/assets/pizzip/dist/pizzip.min.js' | url }}"></script>
+<script src="{{ '/assets/docxtemplater/build/docxtemplater.min.js' | url }}"></script>
+
+<div class="icr-form-builder-wrapper static-content">
+    <h1 class="margin-top-0">
+        <img src="{{ '/assets/images/icr-header-icon.webp' | url }}" role="img" alt="" width="75" height="76" />
+        <span>Creating an Information Collection Request</span>
+    </h1>
+    <h2>Instructions</h2>
+    <h3 class="font-body-sm">You must submit a completed Information Collection Request (ICR) form in order to get Fast Track PRA clearance for your UX/CX research.</h3>
+    <p>You can either <a href="{{ '/assets/documents/ICR-Template_A11-Section-280-Clearance-v5-13-24-original.docx' | url }}" class="usa-link">download the template as a .docx file</a> and complete it manually OR enter your information about your research into the guided ICR Form Builder below. (You do not have to do both.)</p>
+    <p>After completing the documentation for your project, please follow the remaining steps to submit it.</p>
+    
+    <section class="usa-section icr-form-builder-section">
+        <h2 class="site-preview-heading margin-top-0 margin-bottom-05">ICR Form Builder</h2>
+        <div class="usa-step-indicator">
+          <ol class="usa-step-indicator__segments">
+            <li class="usa-step-indicator__segment" id="step-indicator-0">
+              <span class="usa-step-indicator__segment-label">Details</span>
+            </li>
+            <li class="usa-step-indicator__segment" id="step-indicator-1">
+              <span class="usa-step-indicator__segment-label">Description</span>
+            </li>
+            <li class="usa-step-indicator__segment" id="step-indicator-2">
+              <span class="usa-step-indicator__segment-label">Burden estimate</span>
+            </li>
+            <li class="usa-step-indicator__segment" id="step-indicator-3">
+              <span class="usa-step-indicator__segment-label">Certification</span>
+            </li>
+            <!-- <li class="usa-step-indicator__segment" id="step-indicator-4">
+              <span class="usa-step-indicator__segment-label">Attachments</span>
+            </li> -->
+            <li class="usa-step-indicator__segment" id="step-indicator-5">
+              <span class="usa-step-indicator__segment-label">Review</span>
+            </li>
+          </ol>
+          <div class="usa-step-indicator__header">
+            <h4 class="usa-step-indicator__heading">
+              <span class="usa-step-indicator__heading-counter">
+                <span class="usa-sr-only">Step</span>
+                <span class="usa-step-indicator__current-step" id="current-step-number">1</span>
+                <span class="usa-step-indicator__total-steps">of 5</span>
+              </span>
+              <span class="usa-step-indicator__heading-text" id="current-step-text">Details of information collection</span>
+            </h4>
+          </div>
+        </div>
+      
+        <form id="wizardForm">
+            <!-- Step 1 -->
+            <div class="step" data-step-title="Details of information collection">
+                <!-- Title of Information Collection -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">Title of information collection <span class="usa-hint">*</span></legend>
+                    <label class="usa-label" for="title">Write the title of your project here.</label>
+                    <input class="usa-input" type="text" id="title" name="title" required>
+                </fieldset>
+    
+                <!-- Purpose of Collection -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">Purpose of collection <span class="usa-hint">*</span></legend>
+                    <label class="usa-label" for="purpose">What are you hoping to learn / improve?</label>
+                    <textarea class="usa-textarea" id="purpose" name="purpose" rows="4" cols="50" required></textarea>
+                </fieldset>
+            
+                <!-- Type of Activity -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">Type of activity <span class="usa-hint">*</span></legend>
+                    <span class="usa-hint">Choose one.</span>
+                    <div class="usa-radio">
+                        <input class="usa-radio__input" id="activity-customer-research" type="radio" name="radioSelection" value="Customer research (interview, focus groups, surveys)" required>
+                        <label class="usa-radio__label" for="activity-customer-research">Customer research (interview, focus groups, surveys)</label>
+                    </div>
+                    <div class="usa-radio">
+                        <input class="usa-radio__input" id="activity-feedback-survey" type="radio" name="radioSelection" value="Customer feedback survey">
+                        <label class="usa-radio__label" for="activity-feedback-survey">Customer feedback survey</label>
+                    </div>
+                    <div class="usa-radio">
+                        <input class="usa-radio__input" id="activity-usability-testing" type="radio" name="radioSelection" value="Usability testing of products or services">
+                        <label class="usa-radio__label" for="activity-usability-testing">Usability testing of products or services</label>
+                    </div>
+                </fieldset>
+            
+                <!-- Survey Reporting -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">If this is a survey, will the results of this survey be reported to Touchpoints as
+                        part of quarterly reporting obligations specified in OMB Circular A-11 Section 280? <span
+                            class="usa-hint">*</span></legend>
+                    <span class="usa-hint">Choose one.</span>
+                    <div class="usa-radio">
+                        <input class="usa-radio__input" id="survey-yes" type="radio" name="surveyResults" value="Yes" required>
+                        <label class="usa-radio__label" for="survey-yes">Yes</label>
+                    </div>
+                    <div class="usa-radio">
+                        <input class="usa-radio__input" id="survey-no" type="radio" name="surveyResults" value="No">
+                        <label class="usa-radio__label" for="survey-no">No</label>
+                    </div>
+                    <div class="usa-radio">
+                        <input class="usa-radio__input" id="survey-not-a-survey" type="radio" name="surveyResults"
+                            value="Not a survey">
+                        <label class="usa-radio__label" for="survey-not-a-survey">Not a survey</label>
+                    </div>
+                </fieldset>
+            
+                <!-- Collection Methods -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">How will you collect information? <span class="usa-hint">*</span></legend>
+                    <span class="usa-hint">Please select all that apply.</span>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="collection-web-based" type="checkbox" name="checkboxes"
+                            value="Web-based or social media" required>
+                        <label class="usa-checkbox__label" for="collection-web-based">Web-based or social media <span
+                                class="usa-hint">This can include video conferencing (Google Meet, Zoom, etc.)</span></label>
+                    </div>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="collection-telephone" type="checkbox" name="checkboxes"
+                            value="Telephone">
+                        <label class="usa-checkbox__label" for="collection-telephone">Telephone</label>
+                    </div>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="collection-in-person" type="checkbox" name="checkboxes"
+                            value="In-person">
+                        <label class="usa-checkbox__label" for="collection-in-person">In-person</label>
+                    </div>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="collection-mail" type="checkbox" name="checkboxes"
+                            value="Mail">
+                        <label class="usa-checkbox__label" for="collection-mail">Mail</label>
+                    </div>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input" id="collection-other" type="checkbox" name="checkboxes"
+                            value="Other">
+                        <label class="usa-checkbox__label" for="collection-other">Other</label>
+                    </div>
+                </fieldset>
+            
+                <p class="text-right">
+                    <button type="button" class="usa-button" onclick="nextStep()">Continue</button>
+                </p>
+            </div>
+    
+            <!-- Step 2 -->
+            <div class="step" data-step-title="Description of information collection">
+                <!-- Who will you collect the information from? -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">Who will you collect the information from? <span class="usa-hint">*</span></legend>
+                    <label class="usa-label" for="collect-info-from">Explain who will be interviewed and why the group is appropriate for the Federal program / service to connect with. Please provide a description of how you plan to identify your potential group of respondents and if only a sample will be solicited for feedback, how you will select them.</label>
+                    <textarea class="usa-textarea" id="collect-info-from" name="collectInfoFrom" rows="5" required></textarea>
+                </fieldset>
+    
+                <!-- How will you ask a respondent to provide this information? -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">How will you ask a respondent to provide this information? <span class="usa-hint">*</span></legend>
+                    <label class="usa-label" for="respondent-provide-info">(e.g., after an application is submitted online, the final screen will present the opportunity to provide feedback by presenting a link to a feedback form / an actual feedback form)</label>
+                    <textarea class="usa-textarea" id="respondent-provide-info" name="respondentProvideInfo" rows="5" required></textarea>
+                </fieldset>
+    
+                <!-- What will the activity look like? -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">What will the activity look like? <span class="usa-hint">*</span></legend>
+                    <label class="usa-label" for="activity-look-like">Describe the information collection activity – e.g. what happens when a person agrees to participate? Will facilitators or interviewers be used? What's the format of the interview/focus group? If a survey, describe the overall survey layout/length/other details? If User Testing, what actions will you observe / how will you have respondents interact with a product you need feedback on?</label>
+                    <textarea class="usa-textarea" id="activity-look-like" name="activityLookLike" rows="5" required></textarea>
+                </fieldset>
+    
+                <!-- Please provide your question list -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">Please provide your question list <span class="usa-hint">*</span></legend>
+                    <label class="usa-label" for="question-list">Paste here the questions or prompts presented to participants in your activity. If you have an interview / facilitator guide, that can be attached to the submission and referenced here. Please make sure that all instruments, instructions, and scripts are submitted with the request.</label>
+                    <textarea class="usa-textarea" id="question-list" name="questionList" rows="5" required></textarea>
+                </fieldset>
+    
+                <!-- When will the activity happen? -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">When will the activity happen? <span class="usa-hint">*</span></legend>
+                    <label class="usa-label" for="activity-timing">Describe the time frame or number of events that will occur (e.g., We will conduct focus groups on May 13,14,15, We plan to conduct customer intercept interviews over the course of the Summer at the field offices identified in response to #2 based on scheduling logistics concluding by Sept. 10th, or "This survey will remain on our website in alignment with the timing of the overall clearance.”)</label>
+                    <textarea class="usa-textarea" id="activity-timing" name="activityTiming" rows="5" required></textarea>
+                </fieldset>
+    
+                <!-- Is an incentive provided to participants? -->
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">Is an incentive (e.g., money or reimbursement of expenses, token of appreciation) provided to participants? <span class="usa-hint">*</span></legend>
+                    <div class="usa-radio">
+                        <input class="usa-radio__input" id="incentive-yes" type="radio" name="incentiveOptions" value="Yes" required>
+                        <label class="usa-radio__label" for="incentive-yes">Yes</label>
+                    </div>
+                    <div class="usa-radio">
+                        <input class="usa-radio__input" id="incentive-no" type="radio" name="incentiveOptions" value="No">
+                        <label class="usa-radio__label" for="incentive-no">No</label>
+                    </div>
+                </fieldset>
+                <fieldset class="usa-fieldset" id="incentive-description-container">
+                    <label class="usa-label" for="incentiveDescription">If yes, describe:</label>
+                    <textarea class="usa-textarea" id="incentiveDescription" name="incentiveDescription" rows="5"></textarea>
+                </fieldset>
+    
+                <p class="text-right">
+                    <button type="button" class="usa-button usa-button--outline" onclick="previousStep()">Back</button>
+                    <button type="button" class="usa-button" onclick="nextStep()">Continue</button>  
+                </p>
+            </div>
+      
+            <!-- Step 3 -->
+            <div class="step" data-step-title="Burden estimate">
+                <p class="usa-hint">Select the categories that apply and provide the required information for each.</p>   
+                <fieldset class="usa-fieldset">
+                    <legend class="usa-legend">Category of respondents <span class="usa-hint">*</span></legend>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input category-checkbox" id="individuals-checkbox" type="checkbox" name="category" value="Individuals" />
+                        <label class="usa-checkbox__label" for="individuals-checkbox">Individuals or Households</label>
+                    </div>
+                    <!-- Inputs for each category -->
+                    <div id="Individuals-inputs" class="category-inputs" style="display: none;">
+                        <p>
+                            <label class="usa-label" for="numberOfRespondents-Individuals">Number of respondents *</label>
+                            <input class="usa-input dynamic-input" id="numberOfRespondents-Individuals" data-category="Individuals" type="number" />                            
+                        </p>
+                        <p>
+                            <label class="usa-label" for="participationTime-Individuals">Participation time (minutes) *</label>
+                            <input class="usa-input dynamic-input" id="participationTime-Individuals" data-category="Individuals" type="number" />
+                        </p>
+                    </div>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input category-checkbox" id="private-checkbox" type="checkbox" name="category" value="PrivateSector" />
+                        <label class="usa-checkbox__label" for="private-checkbox">Private Sector</label>
+                    </div>
+                    <div id="PrivateSector-inputs" class="category-inputs" style="display: none;">
+                        <p>
+                            <label class="usa-label" for="numberOfRespondents-PrivateSector">Number of respondents *</label>
+                            <input class="usa-input dynamic-input" id="numberOfRespondents-PrivateSector" data-category="PrivateSector" type="number" />                        
+                        </p>
+                        <p>
+                            <label class="usa-label" for="participationTime-PrivateSector">Participation time (minutes) *</label>
+                            <input class="usa-input dynamic-input" id="participationTime-PrivateSector" data-category="PrivateSector" type="number" />
+                        </p>
+                    </div>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input category-checkbox" id="state-checkbox" type="checkbox" name="category" value="StateLocal" />
+                        <label class="usa-checkbox__label" for="state-checkbox">State, local, or tribal governments</label>
+                    </div>
+                    <div id="StateLocal-inputs" class="category-inputs" style="display: none;">
+                        <p>
+                            <label class="usa-label" for="numberOfRespondents-StateLocal">Number of respondents *</label>
+                            <input class="usa-input dynamic-input" id="numberOfRespondents-StateLocal" data-category="StateLocal" type="number" />                    
+                        </p>
+                        <p>
+                            <label class="usa-label" for="participationTime-StateLocal">Participation time (minutes) *</label>
+                            <input class="usa-input dynamic-input" id="participationTime-StateLocal" data-category="StateLocal" type="number" />
+                        </p>
+                    </div>
+                    <div class="usa-checkbox">
+                        <input class="usa-checkbox__input category-checkbox" id="federal-checkbox" type="checkbox" name="category" value="Federal" />
+                        <label class="usa-checkbox__label" for="federal-checkbox">Federal Government</label>
+                    </div>
+                    <div id="Federal-inputs" class="category-inputs" style="display: none;">
+                        <p>
+                            <label class="usa-label" for="numberOfRespondents-Federal">Number of respondents *</label>
+                            <input class="usa-input dynamic-input" id="numberOfRespondents-Federal" data-category="Federal" type="number" />                  
+                        </p>
+                        <p>
+                            <label class="usa-label" for="participationTime-Federal">Participation time (minutes) *</label>
+                            <input class="usa-input dynamic-input" id="participationTime-Federal" data-category="Federal" type="number" />
+                        </p>
+                    </div>
+                </fieldset>
+        
+                <p class="text-right">
+                    <button type="button" class="usa-button usa-button--outline" onclick="previousStep()">Back</button>
+                    <button type="button" class="usa-button" onclick="nextStep()">Continue</button>
+                </p>
+            </div>
+            
+      
+          <!-- Step 4 -->
+          <div class="step" data-step-title="Certification">
+            <fieldset class="usa-fieldset certification">
+                <legend class="usa-legend">I certify the following to be true <span class="usa-hint">*</span></legend>
+                <ul class="usa-list">
+                    <li>The collections are voluntary;</li>
+                    <li>The collections are low-burden for respondents (based on considerations of total burden hours or burden-hours per respondent) and are low-cost for both the respondents and the Federal Government;</li>
+                    <li>The collections are non-controversial;</li>
+                    <li>Any collection is targeted to the solicitation of opinions from respondents who have experience with the program or may have experience with the program in the near future;</li>
+                    <li>Personally identifiable information (PII) is collected only to the extent necessary and is not retained;</li>
+                    <li>Information gathered is intended to be used for general service improvement and program management purposes;</li>
+                    <li>The agency will follow the procedures specified in OMB Circular A-11 Section 280 for the required quarterly reporting to OMB of trust data and experience driver data from surveys.</li>
+                    <li>Outside of the quarterly reporting mentioned in the bullet immediately above, if the agency intends to release journey maps, user personas, reports, or other data-related summaries stemming from this collection, the agency must include appropriate caveats around those summaries, noting that conclusions should not be generalized beyond the sample, considering the sample size and response rates. The agency must submit the data summary itself (e.g., the report) and the caveat language mentioned above to OMB before it releases them outside the agency. OMB will engage in a passback process with the agency.</li>
+                  </ul>
+    
+                  <p>
+                    <label class="usa-label" for="name">Name <span class="usa-hint">*</span></label>
+                    <input class="usa-input" type="text" id="name" name="name" required>
+                  </p>
+    
+                  <p class="margin-top-5">
+                    <label class="usa-label" for="email">Email address <span class="usa-hint">*</span></label>
+                    <input class="usa-input" type="email" id="email" name="email" required>
+                  </p>
+            </fieldset>
+    
+            <p class="text-right">
+                <button type="button" class="usa-button usa-button--outline" onclick="previousStep()">Back</button>
+                <button type="button" class="usa-button" onclick="submitForm()">Submit</button> 
+            </p>
+          </div>
+      
+          <!-- Step 5 -->
+          <!-- <div class="step" data-step-title="Attachments">
+            <fieldset class="usa-fieldset">
+                <legend class="usa-legend">Upload all instruments, instructions, scripts and any other supporting documents associated with this ICR</legend>
+                <label class="usa-label" for="attachments">Select one or more files</label>
+                <div class="file-upload-wrapper">
+                    <input class="usa-file-input" type="file" id="attachments" name="attachments" multiple>
+                    <div id="file-list"></div>
+                </div>
+            </fieldset>
+    
+            <p class="text-right">
+                <button type="button" class="usa-button usa-button--outline" onclick="previousStep()">Back</button>
+                <button type="button" class="usa-button" onclick="nextStep()">Continue</button>  
+            </p>
+          </div> -->
+      
+          <!-- Step 6 -->
+          <div class="step" data-step-title="Review">
+            <div id="downloadSection">
+                <p class="text-bold">You can preview your completed ICR form below. If you need to make edits, you can go back and do so.</p>
+    
+                <iframe title="ICR Template Preview" data-dynamic-src="{{ '/assets/documents/ICR-Template_A11-Section-280-Clearance-v5-13-24.docx' | url }}" width="100%" height="600"></iframe>
+                
+                <p class="text-bold">Once you are satisfied with your ICR form, you can download it. You can also go back and make edits.</p>
+                
+                <p class="text-bold">After downloading, please email the completed form and all instruments (surveys, forms, etc.) to the OMB CX Desk, cc'ing <a class="usa-link" href="mailto:tts-research@gsa.gov">tts-research@gsa.gov</a> and <a class="usa-link" href="mailto:GSARegSec@gsa.gov">GSARegSec@gsa.gov</a>.</p>
+    
+            </div>
+
+            <div class="make-edits-download-wrapper text-right">
+                <button type="button" class="usa-button usa-button--unstyled make-edits margin-right-3" onclick="previousStep()">Make edits</button>
+                <a class="usa-button download-updated-form" id="downloadLink" href="#" download="ICR-Template-Completed.docx">Download</a> 
+            </div>
+          </div>
+        </form>
+    </section>
+
+    {{ content }}
+</div>
+
+
+
+{% capture icrFormWizardJs %}
+{% include "_includes/theme/js/icr-form-wizard.js" %}
+{% endcapture %}
+
+{% capture baseUrl %}
+{% include "_includes/theme/js/base-url.js" %}
+{% endcapture %}
+
+<script>
+    // ICR Form Wizard Script
+    {{ icrFormWizardJs | jsmin }}
+</script>

@@ -3,479 +3,248 @@ layout: layouts/page
 ---
 
 <div class="find-out-if-you-need-pra-wrapper static-content">
-    <h1 class="margin-top-0">Find out if you need PRA clearance</h1>
-    <p>If you still need to find out whether you need PRA clearance, you've come to the right spot. We can walk you
-        through relevant considerations and help you get an answer.</p>
-    <section class="usa-section what-do-you-need-pra-for-section border-section">
-        <h2 class="site-preview-heading">What do you think you might need PRA clearance for?</h2>
-        <ul class="usa-card-group grid-row">
-            <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
-                <div class="usa-card__container">
-                    <div class="usa-card__header">
-                        <p class="usa-card__heading text-bold">Recruitment</p>
-                    </div>
-                    <div class="usa-card__media usa-card__media--inset">
-                        <div class="usa-card__img">
-                            <img aria-hidden="true" src="{{ '/assets/images/recruitment-icon.webp' | url }}" alt=""
-                                width="150" height="150" />
+    <h1 class="margin-top-0">
+        <img src="{{ '/assets/images/not-sure-pra-icon-small.webp' | url }}" alt="" width="75" height="75" />
+        <span>Determining if you need PRA clearance</span>       
+    </h1>
+    <section id="quiz-options" class="usa-section quiz-options-section border-section">
+        <h2>Take a quiz</h2>
+        <p class="margin-bottom-4">If you are unsure whether your research activities will require PRA clearance, you can take the following quiz below to find out.</p>
+
+        <div class="quiz-option-container">
+            <div class="usa-form questions-box">
+                <div class="grid-row grid-gap question-box-intro">
+                    <h3 class="site-preview-heading margin-bottom-0 text-center">Take a quiz to find out if you need PRA clearance.</h3>
+                    <h4 class="text-center">What do you think you might need PRA clearance for?</h4>
+                    <div class="tablet:grid-col-6 margin-bottom-2">
+                        <div class="content-row height-full">
+                            <button class="usa-button icon-button open-recruitment-quiz text-bold padding-3 radius-md" type="button">
+                                <img src="{{ '/assets/images/recruitment-icon-small.webp' | url }}" alt="" width="125" height="125" />
+                                <span>Recruitment</span>   
+                            </button>
                         </div>
                     </div>
-                    <div class="usa-card__body">
-                        <p>
-                            Did you know you might need PRA for recruiting participants? Click below to find out more.
-                        </p>
-                    </div>
-                    <div class="usa-card__footer">
-                        <a href="{{ '#pra-for-recruitment' | url }}" class="usa-button">PRA for recruitment</a>
-                    </div>
-                </div>
-            </li>
-            <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
-                <div class="usa-card__container">
-                    <div class="usa-card__header text-bold">
-                        <p class="usa-card__heading">Research</p>
-                    </div>
-                    <div class="usa-card__media usa-card__media--inset">
-                        <div class="usa-card__img">
-                            <img aria-hidden="true" src="{{ '/assets/images/research-icon.webp' | url }}" alt=""
-                                width="150" height="150" />
+                    <div class="tablet:grid-col-6 margin-bottom-2">
+                        <div class="content-row height-full">
+                            <button class="usa-button icon-button open-research-quiz text-bold padding-3 radius-md" type="button">
+                                <img src="{{ '/assets/images/research-icon-small.webp' | url }}" alt="" width="125" height="125" />
+                                <span>Research</span> 
+                            </button>
                         </div>
                     </div>
-                    <div class="usa-card__body">
-                        <p>
-                            Find out how likely it is that you will need PRA clearance for your research activities by
-                            clicking below.
-                        </p>
-                    </div>
-                    <div class="usa-card__footer">
-                        <a href="{{ '#pra-for-researcher' | url }}" class="usa-button">PRA for research</a>
-                    </div>
                 </div>
-            </li>
-            <li class="usa-card tablet:grid-col-6 desktop:grid-col-4">
-                <div class="usa-card__container">
-                    <div class="usa-card__header">
-                        <p class="usa-card__heading text-bold">Not sure yet... </p>
-                    </div>
-                    <div class="usa-card__media usa-card__media--inset">
-                        <div class="usa-card__img">
-                            <img aria-hidden="true" src="{{ '/assets/images/not-sure-yet-icon.webp' | url }}" alt=""
-                                width="150" height="150" />
+                
+                <form id="pra-recruitment-quiz">
+                    <p class="text-center"><img src="{{ '/assets/images/recruitment-icon-small.webp' | url }}" alt="" width="150" height="150" /></p>
+                    <h3 class="text-center">Find out if you will need PRA clearance for RECRUITMENT</h3>
+                    <h4 class="margin-bottom-105">Answer the following questions about your RECRUITMENT activities:</h4>
+                    <fieldset class="usa-fieldset grid-row">
+                        <div class="tablet:grid-col-7">
+                            <legend class="usa-legend"><span class="text-bold">Will you be recruiting 10 or more participants for your research?</span><br> (Regardless of how many will actually participate in the research.)</legend>
                         </div>
+                        <div class="tablet:text-right yesNoWrapper tablet:grid-col-5">
+                            <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
+                                <input class="usa-radio__input" id="recruiting-10-or-more-yes" type="radio" name="recruiting-10-or-more" value="yes" />
+                                <label class="usa-radio__label" for="recruiting-10-or-more-yes">Yes</label>
+                            </span>
+                            <span class="usa-radio display-inline-block text-middle margin-top-05">
+                                <input class="usa-radio__input" id="recruiting-10-or-more-no" type="radio" name="recruiting-10-or-more" value="no" />
+                                <label class="usa-radio__label" for="recruiting-10-or-more-no">No</label>
+                            </span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="usa-fieldset grid-row">
+                        <div class="tablet:grid-col-7">
+                            <legend class="usa-legend text-bold">Are you planning to recruit any members of the public?</legend>
+                        </div>
+                        <div class="tablet:text-right yesNoWrapper tablet:grid-col-5">
+                            <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
+                                <input class="usa-radio__input" id="recruiting-public-yes" type="radio" name="recruiting-public" value="yes" />
+                                <label class="usa-radio__label" for="recruiting-public-yes">Yes</label>
+                            </span>
+                            <span class="usa-radio display-inline-block text-middle margin-top-05">
+                                <input class="usa-radio__input" id="recruiting-public-no" type="radio" name="recruiting-public" value="no" />
+                                <label class="usa-radio__label" for="recruiting-public-no">No</label>
+                            </span>
+                        </div>
+                    </fieldset>   
+                    <fieldset class="usa-fieldset grid-row">
+                        <div class="tablet:grid-col-7">
+                            <legend class="usa-legend"><span class="text-bold">Will you be collecting Personally Identifiable Information (PII) other than a participant's contact information (email address or phone number)?</span><br> PII includes (but is not limited to), demographic characteristics like age, gender, race/ethnicity, etc. <a class="usa-link usa-link--external" rel="noreferrer" target="_blank" href="https://www.gsa.gov/directives-library/gsa-rules-of-behavior-for-handling-personally-identifiable-information-pii-2">Learn more <span
+                                class="usa-sr-only">about Personally Identifiable Information (PII)</span></a>.</legend>
+                        </div>
+                        <div class="yesNoWrapper tablet:grid-col-5">
+                            <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
+                                <input class="usa-radio__input" id="collecting-pii-yes" type="radio" name="collecting-pii" value="yes" />
+                                <label class="usa-radio__label" for="collecting-pii-yes">Yes</label>
+                            </span>
+                            <span class="usa-radio display-inline-block text-middle margin-top-05">
+                                <input class="usa-radio__input" id="collecting-pii-no" type="radio" name="collecting-pii" value="no" />
+                                <label class="usa-radio__label" for="collecting-pii-no">No</label>
+                            </span>
+                        </div>
+                    </fieldset>
+                    <p class="quidance-container guidance-gray text-base-light">Guidance will appear here</p>
+                    <div class="switch-reset-button-wrapper grid-row">
+                        <div class="tablet:grid-col-6">
+                            <button class="usa-button usa-button--unstyled switch-to-research-form text-bold" type="button">Switch to PRA for RESEARCH quiz</button>
+                        </div>
+                        <div class="reset-form-wrapper tablet:grid-col-6">
+                            <button class="usa-button usa-button--unstyled reset-form text-bold" type="button">Reset</button>
+                        </div>   
                     </div>
-                    <div class="usa-card__body">
-                        <p>
-                            If you're not sure yet, you can learn more about PRA clearance for recruitment vs. research
-                            by clicking below.
-                        </p>
+                </form>
+
+                <form id="pra-researcher-quiz">
+                    <p class="text-center"><img src="{{ '/assets/images/research-icon-small.webp' | url }}" alt="" width="150" height="150" /></p>
+                    <h3 class="text-center">Find out if you will need PRA clearance for RESEARCH</h3>
+                    <h4 class="margin-bottom-105">Answer the following questions about your RESEARCH PARTICIPANTS:</h4>
+                    <fieldset class="usa-fieldset grid-row">
+                        <div class="tablet:grid-col-7">
+                            <legend class="usa-legend"><span class="text-bold">Will you be conducting research with 10 or more participants (per "round" of research)?</span><br> For example, if you are interviewing participants, conducting usability testing and then sending out a post-launch feedback survey in the course of developing a new product, each of these activities would be considered different "rounds" of research because they are intended to collect different information. </legend>
+                        </div>
+                        <div class="tablet:text-right yesNoWrapper tablet:grid-col-5">
+                            <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
+                                <input class="usa-radio__input" id="research-10-or-more-yes" type="radio" name="research-10-or-more" value="yes" />
+                                <label class="usa-radio__label" for="research-10-or-more-yes">Yes</label>
+                            </span>
+                            <span class="usa-radio display-inline-block text-middle margin-top-05">
+                                <input class="usa-radio__input" id="research-10-or-more-no" type="radio" name="research-10-or-more" value="no" />
+                                <label class="usa-radio__label" for="research-10-or-more-no">No</label>
+                            </span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="usa-fieldset grid-row">
+                        <div class="tablet:grid-col-7">
+                            <legend class="usa-legend"><span class="text-bold">Will ANY of your research participants be members of the public?</span><br> A member of the public is anyone who is not a federal employee or contractor acting within the scope of their employment.</legend>
+                        </div>
+                        <div class="tablet:text-right yesNoWrapper tablet:grid-col-5">
+                            <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
+                                <input class="usa-radio__input" id="research-public-yes" type="radio" name="research-public" value="yes" />
+                                <label class="usa-radio__label" for="research-public-yes">Yes</label>
+                            </span>
+                            <span class="usa-radio display-inline-block text-middle margin-top-05">
+                                <input class="usa-radio__input" id="research-public-no" type="radio" name="research-public" value="no" />
+                                <label class="usa-radio__label" for="research-public-no">No</label>
+                            </span>
+                        </div>
+                    </fieldset>   
+                    <h4>Answer the following questions about your RESEARCH METHODS:</h4>
+
+                    <fieldset class="usa-fieldset grid-row">
+                        <div class="tablet:grid-col-7">
+                            <legend class="usa-legend"><span class="text-bold">Will your research involve direct observation?</span><br> That is, will you or someone on your team gather information by observing participants in person, virtually or on a recording?</legend>
+                        </div>
+                        <div class="tablet:text-right yesNoWrapper tablet:grid-col-5">
+                            <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
+                                <input class="usa-radio__input" id="direct-observation-yes" type="radio" name="direct-observation" value="yes" />
+                                <label class="usa-radio__label" for="direct-observation-yes">Yes</label>
+                            </span>
+                            <span class="usa-radio display-inline-block text-middle margin-top-05">
+                                <input class="usa-radio__input" id="direct-observation-no" type="radio" name="direct-observation" value="no" />
+                                <label class="usa-radio__label" for="direct-observation-no">No</label>
+                            </span>
+                        </div>
+                    </fieldset>  
+                    <fieldset class="usa-fieldset grid-row">
+                        <div class="tablet:grid-col-7">
+                            <legend class="usa-legend"><span class="text-bold">Will you be posing a set of close-ended questions to participants?</span><br> Close-ended questions have a limited range of answers (for example, "How would you rate your experience on a scale of 1-5?"), while open-ended questions do not limit participant answers (for example, "Please provide feedback on your experience using this website.") </legend>
+                        </div>
+                        <div class="tablet:text-right yesNoWrapper tablet:grid-col-5">
+                            <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
+                                <input class="usa-radio__input" id="close-ended-question-yes" type="radio" name="close-ended-question" value="yes" />
+                                <label class="usa-radio__label" for="close-ended-question-yes">Yes</label>
+                            </span>
+                            <span class="usa-radio display-inline-block text-middle margin-top-05">
+                                <input class="usa-radio__input" id="close-ended-question-no" type="radio" name="close-ended-question" value="no" />
+                                <label class="usa-radio__label" for="close-ended-question-no">No</label>
+                            </span>
+                        </div>
+                    </fieldset>
+   
+                    <p class="quidance-container guidance-gray">Guidance will appear here</p>
+    
+                    <div class="switch-reset-button-wrapper grid-row">
+                        <div class="tablet:grid-col-6">
+                            <button class="usa-button usa-button--unstyled switch-to-recruitment-form text-bold" type="button">Switch to PRA for RECRUITMENT quiz</button>
+                        </div>
+                        <div class="reset-form-wrapper tablet:grid-col-6">
+                            <button class="usa-button usa-button--unstyled reset-form text-primary-lighter text-bold" type="button">Reset</button>
+                        </div>   
                     </div>
-                    <div class="usa-card__footer">
-                        <a href="{{ '#common-research-methods' | url }}" class="usa-button">Learn more <span
-                                class="usa-sr-only">about PRA clearance for recruitment vs. research</span></a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="usa-alert usa-alert--info">
-            <div class="usa-alert__body">
-                <p class="usa-alert__heading text-bold margin-bottom-05">PRA clearance for RECRUITMENT vs. RESEARCH
-                    activities
-                </p>
-                <p class="margin-top-0 text-bold margin-bottom-05">You may need separate clearances for recruitment and
-                    research
-                    activities.</p>
-                <p class="usa-alert__text margin-top-05">
-                    This is because both recruitment activities and research activities could constitute different kinds
-                    of "information collections". Find out more below or jump down to look at examples.
-                </p>
+                </form>
             </div>
         </div>
     </section>
-    <section class="usa-section pra-determination-section border-section">
-        <h2 class="site-preview-heading">What factors determine if you need PRA clearance?</h2>
-        <p>Because PRA governs the collection of information of the public, whether or not you need PRA clearance for
-            your research activities hinges on the definition of "information", what constitutes an "information
-            collection" and how PRA applies. Below are relevant excerpts from the text of the law and other official
-            guidance:
-        </p>
-        <div class="quote-slider margin-top-5" role="region" aria-roledescription="carousel" aria-label="Quotes Slider">
-            <!-- Slide Container -->
-            <ul class="slides-container" id="slides-container">
-                <li class="slide">
-                    <blockquote>
-                        <q>An information collection means "obtaining, soliciting, or requiring the disclosure to third
-                            parties or the public of information (facts or opinions) by or for an agency by means of
-                            identical questions posed to, or identical reporting, record keeping, or disclosure
-                            requirements
-                            imposed on 10 or more persons, whether such collection of information is mandatory,
-                            voluntary,
-                            or necessary to obtain or retain a benefit.</q>
-                        <p class="author margin-top-05 margin-bottom-0">
-                            <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                                href="https://www.ecfr.gov/current/title-5/chapter-III/subchapter-B/part-1320/section-1320.3">5
-                                CFR 1320.3(c)</a>
-                        </p>
-                    </blockquote>
-                </li>
-                <li class="slide">
-                    <blockquote>
-                        <q>It is worth emphasizing that agencies may ask for facts and opinions of Federal employees
-                            without triggering the PRA.</q>
-                        <p class="author margin-top-05 margin-bottom-0">
-                            <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                                href="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/inforeg/PRAPrimer_04072010.pdf">Information
-                                Collection Under the Paperwork Reduction Act</a>
-                        </p>
-                    </blockquote>
-                </li>
-                <li class="slide">
-                    <blockquote>
-                        <q>The PRA applies to collections of information using identical questions posed to, or
-                            reporting
-                            or recordkeeping requirements imposed on, "ten or more persons." For the purpose of counting
-                            the
-                            number of respondents, agencies should consider the number of respondents within any 12
-                            month
-                            period.</q>
-                        <p class="author margin-top-05 margin-bottom-0">
-                            <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                                href="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/inforeg/PRAPrimer_04072010.pdf">Information
-                                Collection Under the Paperwork Reduction Act</a>
-                        </p>
-                    </blockquote>
-                </li>
-                <li class="slide">
-                    <blockquote>
-                        <q>OMB regulations specify a number of items that are generally not "information" under the PRA.
-                            Important examples are...facts or opinions that are (1) submitted in response to general
-                            solicitations of public comments, (2) addressed to a single person, (3) obtained or
-                            solicited at
-                            or in connection with public hearings or meetings, (4) obtained through direct observation
-                            by
-                            the agency (e.g., through visual inspection to determine how long it takes for people to
-                            complete a specific transaction), or (5) obtained from participants in clinical trials
-                            (which
-                            typically do not involve answers to "identical questions").</q>
-                        <p class="author margin-top-05 margin-bottom-0">
-                            <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                                href="https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/inforeg/inforeg/memos/2014/appendix-data-search-tools-calculators.pdf">Exclusions
-                                to the regulatory definition of "information" under Paperwork Reduction Act</a>
-                        </p>
-                    </blockquote>
-                </li>
-            </ul>
-            <!-- Slider Controls -->
-            <div class="slider-controls" role="group" aria-label="Slide controls">
-                <!-- Previous Arrow -->
-                <span class="prev" tabindex="0" role="button" aria-label="Previous Quote">
-                    <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-                        <use xlink:href="{{ '/assets/uswds/img/sprite.svg#navigate_before' | url }}"></use>
-                    </svg>
-                </span>
-
-                <!-- Dot Navigation -->
-                <div class="dot-nav-container">
-                    <div class="dot-nav" tabindex="0" role="button" aria-label="Go to Quote 1">
-                        <span><i class="usa-sr-only">Quote 1</i></span>
-                    </div>
-                    <div class="dot-nav" tabindex="0" role="button" aria-label="Go to Quote 2">
-                        <span><i class="usa-sr-only">Quote 2</i></span>
-                    </div>
-                    <div class="dot-nav" tabindex="0" role="button" aria-label="Go to Quote 3">
-                        <span><i class="usa-sr-only">Quote 3</i></span>
-                    </div>
-                    <div class="dot-nav" tabindex="0" role="button" aria-label="Go to Quote 4">
-                        <span><i class="usa-sr-only">Quote 4</i></span>
-                    </div>                   
-
-                </div>
-
-                <!-- Next Arrow -->
-                <span class="next" tabindex="0" role="button" aria-label="Next Quote">
-                    <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-                        <use xlink:href="{{ '/assets/uswds/img/sprite.svg#navigate_next' | url }}"></use>
-                    </svg>
-                </span>
-            </div>
-        </div>
-        <p class="text-bold">Collectively translated into plain English, these excerpts tell us that whether you need
-            PRA clearance depends on:
-        </p>
-
-        <div class="grid-row grid-gap pra-clearance-dependencies">
-            <div class="grid-col-12 tablet:grid-col-6">
-                <div class="content-row bg-primary-lighter height-full radius-md padding-3">
-                    <p class="text-bold margin-top-0">WHO you will collect information from</p>
-                    <ul class="usa-list margin-top-05">
-                        <li>Whether you will have 10 or more participants (over a 12 month period)</li>
-                        <li>Whether participants are members of the public or federal employees</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="grid-col-12 tablet:grid-col-6">
-                <div class="content-row bg-primary-lighter height-full radius-md padding-3">
-                    <p class="text-bold margin-top-0">HOW you will collect information</p>
-                    <ul class="usa-list margin-top-05">
-                        <li>Whether your research activities are "standardized" (i.e posing a set of "identical
-                            questions")</li>
-                        <li>Whether your research activities involve "direct observation" (i.e. "visual inspection"
-                            of participant activities)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <p>Keep reading to find out how these considerations apply to your recruitment and research activities!</p>
-    </section>
-    <section id="pra-for-recruitment" class="usa-section pra-for-recruitment-section border-section">
-        <h2 class="site-preview-heading margin-bottom-0">PRA clearance for RECRUITMENT activities</h2>
-        <p class="margin-top-05">
-            Recruiting participants for your research may require PRA clearance because it could involve collecting
-            information from members of the public.
-        </p>
-        <form id="pra-recruitment-form" class="usa-form questions-box">
-            <h3>Find out if you will need PRA clearance for RECRUITMENT</h3>
-            <h4>Answer the following questions about your RECRUITMENT activities:</h4>
-            <fieldset class="usa-fieldset grid-row">
-                <div class="grid-col-12 tablet:grid-col-9">
-                    <legend class="usa-legend">Over the course of 12 months will you be recruiting 10 or more participants? (OR is it possible that 10 or more people will respond to your call for recruitment?)</legend>
-                </div>
-                <div class="grid-col-12 tablet:text-right yesNoWrapper tablet:grid-col-3">
-                    <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
-                        <input class="usa-radio__input" id="recruiting-10-or-more-yes" type="radio" name="recruiting-10-or-more" value="yes" />
-                        <label class="usa-radio__label" for="recruiting-10-or-more-yes">Yes</label>
-                    </span>
-                    <span class="usa-radio display-inline-block text-middle margin-top-05">
-                        <input class="usa-radio__input" id="recruiting-10-or-more-no" type="radio" name="recruiting-10-or-more" value="no" />
-                        <label class="usa-radio__label" for="recruiting-10-or-more-no">No</label>
-                    </span>
-                </div>
-            </fieldset>
-            <fieldset class="usa-fieldset grid-row">
-                <div class="grid-col-12 tablet:grid-col-9">
-                    <legend class="usa-legend">Are you planning to recruit any members of the public (including contractors)?</legend>
-                </div>
-                <div class="grid-col-12 tablet:text-right yesNoWrapper tablet:grid-col-3">
-                    <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
-                        <input class="usa-radio__input" id="recruiting-public-yes" type="radio" name="recruiting-public" value="yes" />
-                        <label class="usa-radio__label" for="recruiting-public-yes">Yes</label>
-                    </span>
-                    <span class="usa-radio display-inline-block text-middle margin-top-05">
-                        <input class="usa-radio__input" id="recruiting-public-no" type="radio" name="recruiting-public" value="no" />
-                        <label class="usa-radio__label" for="recruiting-public-no">No</label>
-                    </span>
-                </div>
-            </fieldset>   
-            <fieldset class="usa-fieldset grid-row">
-                <div class="grid-col-12 tablet:grid-col-9">
-                    <legend class="usa-legend">Will you be collecting <a class="usa-link usa-link--external" rel="noreferrer" target="_blank" href="https://www.gsa.gov/directives-library/gsa-rules-of-behavior-for-handling-personally-identifiable-information-pii-2">Personally Identifiable Information</a> (PII) from participants during the recruitment process? PII includes, but is not limited to: name, SSN, DoB, email address, home address, phone number, and demographic characteristics.</legend>
-                </div>
-                <div class="grid-col-12 tablet:text-right yesNoWrapper tablet:grid-col-3">
-                    <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
-                        <input class="usa-radio__input" id="collecting-pii-yes" type="radio" name="collecting-pii" value="yes" />
-                        <label class="usa-radio__label" for="collecting-pii-yes">Yes</label>
-                    </span>
-                    <span class="usa-radio display-inline-block text-middle margin-top-05">
-                        <input class="usa-radio__input" id="collecting-pii-no" type="radio" name="collecting-pii" value="no" />
-                        <label class="usa-radio__label" for="collecting-pii-no">No</label>
-                    </span>
-                </div>
-            </fieldset>
-            <p class="quidance-container guidance-gray">Guidance will appear here</p>
-            <p class="reset-button-wrapper text-right">
-                <button class="usa-button usa-button--unstyled reset-form text-primary-lighter" type="button">Reset</button>
-            </p>
-        </form>
+   
+    <section id="pra-exemptions" class="usa-section pra-exemptions-section border-section">
+        <h2 class="site-preview-heading margin-bottom-0">PRA exemptions</h2>
+        <h3 class="margin-top-05">
+            You do not need PRA clearance if:
+        </h3>
         <div class="usa-accordion usa-accordion--multiselectable" data-allow-multiple>
             <h3 class="usa-accordion__heading">
-                <button type="button" class="usa-accordion__button" aria-expanded="true"
-                    aria-controls="recruitment-activities">
-                    Recruitment activities that do NOT need PRA clearance
-                </button>
+                <button type="button" class="usa-accordion__button" aria-expanded="false"
+                    aria-controls="recruiting-federal-employee-contractors-only">
+                    You are recruiting and/or conducting research with federal employees (and contractors) only.
             </h3>
-            <div id="recruitment-activities" class="usa-accordion__content usa-prose">
-                <h4 class="margin-top-05 margin-bottom-05">Recruiting through third-party services</h4>
+            <div id="recruiting-federal-employee-contractors-only" class="usa-accordion__content usa-prose">
                 <p class="margin-top-05">
-                    If you are using a third-party tool to recruit participants (i.e. UserTesting.com, Optimal Workshop, etc.), you do NOT need PRA clearance. However, you may still need it for research activities; please refer to the research section below.
+                    Federal employees and contractors (acting in their official capacity) are excluded from the definition of "persons" under the PRA, so you do not need clearance to conduct research with them about matters regarding their work.
+                    (<a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/inforeg/PRAPrimer_04072010.pdf">Citation</a>)
                 </p>
-                <h4 class="margin-top-05 margin-bottom-05">Recruiting federal employees ONLY</h4>
-                <p class="margin-top-05">If you are planning to recruit federal employees and federal employees ONLY, you do not need PRA clearance.</p>
+            </div>
+            <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="false"
+                    aria-controls="recruiting-less-than-10-people">
+                    You are recruiting and/or conducting research with fewer than 10 members of the public (per "round" of research).
+            </h3>
+            <div id="recruiting-less-than-10-people" class="usa-accordion__content usa-prose">
+                <p class="margin-top-05">
+                    The PRA does not apply when you are conducting research with less than 10 members of the public. This limit applies per "round" of research, over a 12 month period. For example, if you are interviewing participants, conducting usability testing and then sending out a post-launch feedback survey in the course of developing a new product, each of these would be considered different "rounds" of research because they are intended to collect different information.
+                    (<a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://www.ecfr.gov/current/title-5/chapter-III/subchapter-B/part-1320/section-1320.3">Citation</a>)
+                </p>
+            </div>
+            <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="false"
+                    aria-controls="recruiting-at-public-event">
+                    You are gathering information at a public hearing, meeting or online equivalent.
+            </h3>
+            <div id="recruiting-at-public-event" class="usa-accordion__content usa-prose">
+                <p class="margin-top-05">
+                    (<a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/inforeg/PRAPrimer_04072010.pdf">Citation</a>)
+                </p>
             </div>
         </div>
+    </section>   
+    <section id="pra-for-recruitment" class="usa-section pra-for-recruitment-section border-section">
+        <h2 class="site-preview-heading margin-bottom-0">
+            <img src="{{ '/assets/images/research-icon-small.webp' | url }}" alt="" width="50" height="50" />
+            <span>PRA for recruitment</span>
+        </h2>
+        <h3>Screener surveys for recruitment will need PRA clearance (if 10+ people will respond).</h3>
+        <p class="margin-bottom-05 text-bold">Never fear! You can get PRA clearance for a screener in 7-14 business days.</p>
+        <p class="margin-top-05 margin-bottom-05">Simply follow the process to <a class="usa-link" href="{{ '/getting-started/' | url }}">get Fast Track PRA clearance</a>.</p>
+        <ul class="usa-list margin-top-05">
+            <li>You can also <a class="usa-link usa-link--external" rel="noreferrer" target="_blank" href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202208-3090-003&icID=257585">view an example</a> of a screener that got clearance.</li>
+        </ul>
+        <p class="margin-bottom-05 text-bold">Please note that collecting Personally Identifiable Information (PII) has privacy implications.</p>
+        <p class="margin-top-05">Collecting and storing this information can be as simple as locking a folder with appropriate Controlled Unclassified Information (CUI) labels, but please work with GSAIT's Privacy Office (<a class="usa-link" href="mailto:privacy.office@gsa.gov">privacy.office@gsa.gov</a>) or your supporting counsel in OGC's Tech Law Division to address these implications.</p>
     </section>
     <section id="pra-for-researcher" class="usa-section pra-for-researcher-section border-section">
-        <h2 class="site-preview-heading margin-bottom-0">PRA clearance for RESEARCH activities</h2>
-        <p class="margin-top-05">
-            Depending on the nature of the research method(s) you are using, you may need PRA clearance. Keep reading to find out more.
+        <h2 class="site-preview-heading margin-bottom-0">
+            <img src="{{ '/assets/images/recruitment-icon-small.webp' | url }}" alt="" width="50" height="50" />
+            <span>PRA for research</span>
+        </h2>
+        <h3>The following research methods do not need PRA clearance (regardless of the number of participants).</h3>
+        <p>
+            Each of these methods involve direct observation of participants (in-person, virtual, or on a recording) and/or use open-ended questioning, making them exempt from needing PRA clearance regardless of the number of participants.
         </p>
-        <form id="pra-researcher-form" class="usa-form questions-box">
-            <h3>Find out if you will need PRA clearance for RESEARCH</h3>
-            <h4>Answer the following questions about your RESEARCH PARTICIPANTS:</h4>
-            <fieldset class="usa-fieldset grid-row">
-                <div class="grid-col-12 tablet:grid-col-9">
-                    <legend class="usa-legend">Over the course of 12 months will you be conducting research with 10 or more participants?</legend>
-                </div>
-                <div class="grid-col-12 tablet:text-right yesNoWrapper tablet:grid-col-3">
-                    <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
-                        <input class="usa-radio__input" id="research-10-or-more-yes" type="radio" name="research-10-or-more" value="yes" />
-                        <label class="usa-radio__label" for="research-10-or-more-yes">Yes</label>
-                    </span>
-                    <span class="usa-radio display-inline-block text-middle margin-top-05">
-                        <input class="usa-radio__input" id="research-10-or-more-no" type="radio" name="research-10-or-more" value="no" />
-                        <label class="usa-radio__label" for="research-10-or-more-no">No</label>
-                    </span>
-                </div>
-            </fieldset>
-            <fieldset class="usa-fieldset grid-row">
-                <div class="grid-col-12 tablet:grid-col-9">
-                    <legend class="usa-legend">Will ANY of your research participants be members of the public (including contractors)?</legend>
-                </div>
-                <div class="grid-col-12 tablet:text-right yesNoWrapper tablet:grid-col-3">
-                    <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
-                        <input class="usa-radio__input" id="research-public-yes" type="radio" name="research-public" value="yes" />
-                        <label class="usa-radio__label" for="research-public-yes">Yes</label>
-                    </span>
-                    <span class="usa-radio display-inline-block text-middle margin-top-05">
-                        <input class="usa-radio__input" id="research-public-no" type="radio" name="research-public" value="no" />
-                        <label class="usa-radio__label" for="research-public-no">No</label>
-                    </span>
-                </div>
-            </fieldset>   
-            <h4>Answer the following questions about your RESEARCH METHODS:</h4>
-            <fieldset class="usa-fieldset grid-row">
-                <div class="grid-col-12 tablet:grid-col-9">
-                    <legend class="usa-legend">Will you be posing a set of standardized questions to participants during your research?</legend>
-                </div>
-                <div class="grid-col-12 tablet:text-right yesNoWrapper tablet:grid-col-3">
-                    <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
-                        <input class="usa-radio__input" id="standardized-question-yes" type="radio" name="standardized-question" value="yes" />
-                        <label class="usa-radio__label" for="standardized-question-yes">Yes</label>
-                    </span>
-                    <span class="usa-radio display-inline-block text-middle margin-top-05">
-                        <input class="usa-radio__input" id="standardized-question-no" type="radio" name="standardized-question" value="no" />
-                        <label class="usa-radio__label" for="standardized-question-no">No</label>
-                    </span>
-                </div>
-            </fieldset>
-            <fieldset class="usa-fieldset grid-row">
-                <div class="grid-col-12 tablet:grid-col-9">
-                    <legend class="usa-legend">Will you be directly observing research participants during the research activities?</legend>
-                </div>
-                <div class="grid-col-12 tablet:text-right yesNoWrapper tablet:grid-col-3">
-                    <span class="usa-radio display-inline-block text-middle margin-top-05 margin-right-2">
-                        <input class="usa-radio__input" id="direct-observation-yes" type="radio" name="direct-observation" value="yes" />
-                        <label class="usa-radio__label" for="direct-observation-yes">Yes</label>
-                    </span>
-                    <span class="usa-radio display-inline-block text-middle margin-top-05">
-                        <input class="usa-radio__input" id="direct-observation-no" type="radio" name="direct-observation" value="no" />
-                        <label class="usa-radio__label" for="direct-observation-no">No</label>
-                    </span>
-                </div>
-            </fieldset>     
-            <p class="quidance-container guidance-gray">Guidance will appear here</p>
-            <p class="reset-button-wrapper text-right">
-                <button class="usa-button usa-button--unstyled reset-form text-primary-lighter" type="button">Reset</button>
-            </p>
-        </form>
-        <div class="grid-row grid-gap interview-types">
-            <div class="grid-col-12 tablet:grid-col-6 margin-bottom-4">
-                <div class="usa-alert usa-alert--info height-full">
-                    <div class="usa-alert__body">
-                        <h4 class="usa-alert__heading text-bold margin-bottom-05">Standardized questions</h4>
-                        <p class="margin-top-0 text-bold margin-bottom-05">This refers to a set of identical (word for word) questions that are posed to participants.</p>
-                        <ul class="usa-list margin-top-05">
-                            <li>For example, a screener survey asking for demographic information would be considered "standardized".</li>
-                            <li>Asking participants to think aloud while they try to navigate a website prototype would not be considered "standardized".</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-col-12 tablet:grid-col-6 margin-bottom-4">
-                <div class="usa-alert usa-alert--info height-full">
-                    <div class="usa-alert__body">
-                        <h4 class="usa-alert__heading text-bold margin-bottom-05">Direct observation</h4>
-                        <p class="margin-top-0 text-bold margin-bottom-05">Direct observation involves "visually inspecting" a participant during research.</p>
-                        <ul class="usa-list margin-top-05">
-                            <li>For example, a moderated usability test would involve direct observation, while an unmoderated usability test would not.</li>
-                            <li>Conducting a survey does not involve direct observation.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="usa-accordion usa-accordion--multiselectable" data-allow-multiple>
-            <h3 class="usa-accordion__heading">
-                <button type="button" class="usa-accordion__button" aria-expanded="true"
-                    aria-controls="research-activities">
-                    Research activities that do NOT need PRA clearance
-                </button>
-            </h3>
-            <div id="research-activities" class="usa-accordion__content usa-prose">
-                <h4 class="margin-top-05 margin-bottom-05">Conducting research with federal employees ONLY</h4>
-                <p class="margin-top-05">
-                    If your research participants will be federal employees and federal employees ONLY, you do not need PRA clearance for your research activities.
-                </p>
-                <h4 class="margin-top-05 margin-bottom-05">Collecting research from public meetings or hearings</h4>
-                <p class="margin-top-05">Research in these settings is exempt from PRA.</p>
-            </div>
-        </div>
-    </section>
-    <section id="common-research-methods" class="usa-section common-research-methods-section border-section">
-        <h2 class="site-preview-heading">Common research methods and PRA implications</h2>
-        <p class="margin-top-05">
-            If a method you plan to use is not listed here, please consult OMB's CX PRA Desk Officer for more information.
-        </p>
-        <p class="margin-bottom-05 text-bold font-sans-lg">Discovery methods</p>
-        <p class="margin-top-05">These methods likely do NOT require PRA clearance. Click the link to view the 18F Method card for more information.</p>
-        <ul class="usa-card-group grid-row">
-            <li class="usa-card discovery-methods tablet:grid-col-6 desktop:grid-col-4">
-                <div class="usa-card__container">
-                    <div class="usa-card__header">
-                        <p class="usa-card__heading text-bold">Card sorting</p>
-                    </div>
-                    <div class="usa-card__media usa-card__media--inset">
-                        <div class="usa-card__img">
-                            <img aria-hidden="true" src="{{ '/assets/images/card-sorting-icon.webp' | url }}" alt=""
-                                width="96" height="96" />
-                        </div>
-                    </div>
-                    <div class="usa-card__body">
-                        <p class="margin-top-05 margin-bottom-0 text-primary text-bold">PRA implications</p>
-                        <p class="margin-top-05">
-                            No PRA implications if done as directly moderated sessions. Unmoderated may require PRA.
-                        </p>
-                    </div>
-                    <div class="usa-card__footer">
-                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
-                        href="https://guides.18f.gov/methods/validate/card-sorting/">Learn more <span
-                        class="usa-sr-only">about card sorting</span></a> 
-                    </div>
-                </div>
-            </li>
-            <li class="usa-card discovery-methods tablet:grid-col-6 desktop:grid-col-4">
-                <div class="usa-card__container">
-                    <div class="usa-card__header">
-                        <p class="usa-card__heading text-bold">Multivariate testing</p>
-                    </div>
-                    <div class="usa-card__media usa-card__media--inset">
-                        <div class="usa-card__img">
-                            <img aria-hidden="true" src="{{ '/assets/images/multi-testing-icon.webp' | url }}" alt=""
-                                width="96" height="96" />
-                        </div>
-                    </div>
-                    <div class="usa-card__body">
-                        <p class="margin-top-05 margin-bottom-0 text-primary text-bold">PRA implications</p>
-                        <p class="margin-top-05">
-                            No one asks the participants questions, so PRA does not apply.
-                        </p>
-                    </div>
-                    <div class="usa-card__footer">
-                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
-                        href="https://guides.18f.gov/methods/validate/multivariate-testing/">Learn more <span
-                        class="usa-sr-only">about multivariate testing</span></a> 
-                    </div>
-                </div>
-            </li>
-            <li class="usa-card discovery-methods tablet:grid-col-6 desktop:grid-col-4">
+        <ul class="usa-card-group common-research-methods grid-row">
+            <li class="usa-card discovery-methods desktop:grid-col-6">
                 <div class="usa-card__container">
                     <div class="usa-card__header">
                         <p class="usa-card__heading text-bold">Usability testing</p>
@@ -483,13 +252,12 @@ layout: layouts/page
                     <div class="usa-card__media usa-card__media--inset">
                         <div class="usa-card__img">
                             <img aria-hidden="true" src="{{ '/assets/images/usability-testing-icon.webp' | url }}" alt=""
-                                width="96" height="96" />
+                                width="75" height="75" />
                         </div>
                     </div>
                     <div class="usa-card__body">
-                        <p class="margin-top-05 margin-bottom-0 text-primary text-bold">PRA implications</p>
-                        <p class="margin-top-05">
-                            No PRA implications, as it involves direct observation and non-standardized conversation.
+                        <p class="margin-top-05">Observing participants as they attempt to use a product or service while thinking out loud. <a class="usa-link--external" rel="noreferrer" target="_blank"
+                            href="https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/11/PRA-Usability-Testing-Guidance-Memo.pdf">View OIRA's usability testing guidance for more information.</a>
                         </p>
                     </div>
                     <div class="usa-card__footer">
@@ -499,7 +267,100 @@ layout: layouts/page
                     </div>
                 </div>
             </li>
-            <li class="usa-card discovery-methods tablet:grid-col-6 desktop:grid-col-4">
+            <li class="usa-card discovery-methods desktop:grid-col-6">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <p class="usa-card__heading text-bold">Interviews</p>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/user-interviews-icon.webp' | url }}" alt=""
+                                width="75" height="75" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p class="margin-top-05">
+                            A wide-spanning set of open-ended or semi-structured questions posed to participants to discover more about a problem space.
+                        </p>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://guides.18f.gov/methods/discover/stakeholder-and-user-interviews/">Learn more <span
+                        class="usa-sr-only">about interviews</span></a> 
+                    </div>
+                </div>
+            </li>
+            <li class="usa-card discovery-methods desktop:grid-col-6">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <p class="usa-card__heading text-bold">Open-ended feedback forms</p>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/open-ended-form-icon.webp' | url }}" alt=""
+                                width="75" height="75" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p class="margin-top-05">
+                            Forms that ask open-ended questions like "Please let us know your thoughts". PRA-friendly templates are available through Touchpoints.
+                        </p>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://touchpoints.digital.gov/">Learn more <span
+                        class="usa-sr-only">about open-ended feedback forms</span></a> 
+                    </div>
+                </div>
+            </li>            
+            <li class="usa-card discovery-methods desktop:grid-col-6">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <p class="usa-card__heading text-bold">Card sorting</p>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/card-sorting-icon.webp' | url }}" alt=""
+                                width="75" height="75" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p class="margin-top-05">
+                            A categorization exercise in which participants divide concepts into different groups based on their understanding of those concepts. Can be moderated or unmoderated.
+                        </p>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://guides.18f.gov/methods/validate/card-sorting/">Learn more <span
+                        class="usa-sr-only">about card sorting</span></a> 
+                    </div>
+                </div>
+            </li>
+            <li class="usa-card discovery-methods desktop:grid-col-6">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <p class="usa-card__heading text-bold">A/B or multivariate testing</p>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/multi-testing-icon.webp' | url }}" alt=""
+                                width="75" height="75" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p class="margin-top-05">
+                            A method that asks participants to compare the performance of two or more versions of content to see which one appeals more.
+                        </p>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://guides.18f.gov/methods/validate/multivariate-testing/">Learn more <span
+                        class="usa-sr-only">about A/B or multivariate testing</span></a> 
+                    </div>
+                </div>
+            </li>
+
+            <li class="usa-card discovery-methods desktop:grid-col-6">
                 <div class="usa-card__container">
                     <div class="usa-card__header">
                         <p class="usa-card__heading text-bold">Visual preference testing</p>
@@ -507,13 +368,12 @@ layout: layouts/page
                     <div class="usa-card__media usa-card__media--inset">
                         <div class="usa-card__img">
                             <img aria-hidden="true" src="{{ '/assets/images/visual-pref-testing-icon.webp' | url }}" alt=""
-                                width="96" height="96" />
+                                width="75" height="75" />
                         </div>
                     </div>
                     <div class="usa-card__body">
-                        <p class="margin-top-05 margin-bottom-0 text-primary text-bold">PRA implications</p>
                         <p class="margin-top-05">
-                            No PRA implications, as it involves direct observation and non-standardized conversation.
+                            A method that allows participants to review and provide feedback on a solution's visual direction.                        
                         </p>
                     </div>
                     <div class="usa-card__footer">
@@ -523,59 +383,7 @@ layout: layouts/page
                     </div>
                 </div>
             </li>
-            <li class="usa-card discovery-methods tablet:grid-col-6 desktop:grid-col-4">
-                <div class="usa-card__container">
-                    <div class="usa-card__header">
-                        <p class="usa-card__heading text-bold">Other method</p>
-                    </div>
-                    <div class="usa-card__media usa-card__media--inset">
-                        <div class="usa-card__img">
-                            <img aria-hidden="true" src="{{ '/assets/images/other-methods-icon.webp' | url }}" alt=""
-                                width="96" height="96" />
-                        </div>
-                    </div>
-                    <div class="usa-card__body">
-                        <p class="margin-top-05 margin-bottom-0 text-primary text-bold">PRA implications</p>
-                        <p class="margin-top-05">
-                            Please consult the 18F Method Cards and OMB's CX PRA Desk Officer for more information.
-                        </p>
-                    </div>
-                    <div class="usa-card__footer">
-                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
-                        href="https://guides.18f.gov/methods/">Learn more <span
-                        class="usa-sr-only">about other methods of testing</span></a> 
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <p class="margin-bottom-05 text-bold font-sans-lg">Validation methods</p>
-        <p class="margin-top-05">These methods likely do NOT require PRA clearance. Click the link to view the 18F Method card for more information.</p>
-        <ul class="usa-card-group grid-row">
-            <li class="usa-card discovery-methods tablet:grid-col-6 desktop:grid-col-4">
-                <div class="usa-card__container">
-                    <div class="usa-card__header">
-                        <p class="usa-card__heading text-bold">Cognitive walkthrough</p>
-                    </div>
-                    <div class="usa-card__media usa-card__media--inset">
-                        <div class="usa-card__img">
-                            <img aria-hidden="true" src="{{ '/assets/images/cognitive-icon.webp' | url }}" alt=""
-                                width="96" height="96" />
-                        </div>
-                    </div>
-                    <div class="usa-card__body">
-                        <p class="margin-top-05 margin-bottom-0 text-primary text-bold">PRA implications</p>
-                        <p class="margin-top-05">
-                            No PRA implications, as it involves direct observation and non-standardized conversation.
-                        </p>
-                    </div>
-                    <div class="usa-card__footer">
-                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
-                        href="https://guides.18f.gov/methods/discover/cognitive-walkthrough/">Learn more <span
-                        class="usa-sr-only">about cognitive walkthrough</span></a> 
-                    </div>
-                </div>
-            </li>
-            <li class="usa-card discovery-methods tablet:grid-col-6 desktop:grid-col-4">
+            <li class="usa-card discovery-methods desktop:grid-col-6">
                 <div class="usa-card__container">
                     <div class="usa-card__header">
                         <p class="usa-card__heading text-bold">Contextual inquiry</p>
@@ -583,13 +391,12 @@ layout: layouts/page
                     <div class="usa-card__media usa-card__media--inset">
                         <div class="usa-card__img">
                             <img aria-hidden="true" src="{{ '/assets/images/contextual-icon.webp' | url }}" alt=""
-                                width="96" height="96" />
+                                width="75" height="75" />
                         </div>
                     </div>
                     <div class="usa-card__body">
-                        <p class="margin-top-05 margin-bottom-0 text-primary text-bold">PRA implications</p>
                         <p class="margin-top-05">
-                            No PRA implications, if done properly. Contextual interviews should be non-standardized, conversational, and based on observation.
+                            A method in which participants go about their work as researchers observe and ask questions.
                         </p>
                     </div>
                     <div class="usa-card__footer">
@@ -599,86 +406,116 @@ layout: layouts/page
                     </div>
                 </div>
             </li>
-            <li class="usa-card discovery-methods tablet:grid-col-6 desktop:grid-col-4">
+            <li class="usa-card discovery-methods desktop:grid-col-6">
                 <div class="usa-card__container">
                     <div class="usa-card__header">
-                        <p class="usa-card__heading text-bold">User interviews</p>
+                        <p class="usa-card__heading text-bold">Cognitive walkthrough</p>
                     </div>
                     <div class="usa-card__media usa-card__media--inset">
                         <div class="usa-card__img">
-                            <img aria-hidden="true" src="{{ '/assets/images/user-interviews-icon.webp' | url }}" alt=""
-                                width="96" height="96" />
+                            <img aria-hidden="true" src="{{ '/assets/images/cognitive-icon.webp' | url }}" alt=""
+                                width="75" height="75" />
                         </div>
                     </div>
                     <div class="usa-card__body">
-                        <p class="margin-top-05 margin-bottom-0 text-primary text-bold">PRA implications</p>
                         <p class="margin-top-05">
-                            No PRA implications, as it involves direct observation and non-standardized conversation.
+                            An method in which participants work through a set of representative tasks and ask questions as they go.
                         </p>
                     </div>
                     <div class="usa-card__footer">
                         <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
-                        href="https://guides.18f.gov/methods/discover/stakeholder-and-user-interviews/">Learn more <span
-                        class="usa-sr-only">about usability testing</span></a> 
+                        href="https://guides.18f.gov/methods/discover/cognitive-walkthrough/">Learn more <span
+                        class="usa-sr-only">about cognitive walkthrough</span></a> 
                     </div>
                 </div>
             </li>
         </ul>
+        
+        <h3>Close-ended UX/CX feedback surveys <span class="text-italic">will need</span> PRA clearance and <span class="text-italic">are eligible</span> for the Fast Track process.</h3>
+        <h4 class="margin-bottom-05 text-base-dark">Quantitative feedback surveys</h4>
+        <p class="margin-top-05">This could include, for example, feedback surveys that are based on a Likert scale and/or any other questioning that will produce numerical data for analysis.</p>
+        <ul class="usa-list">
+            <li>Example: <a class="usa-link--external" rel="noreferrer" target="_blank"
+                href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202208-3090-003&icID=264606">IRS Direct File post submission survey</a>
+            </li>
+        </ul>
+        <h4 class="margin-bottom-05 text-base-dark">Close-ended, qualitative feedback surveys</h4>
+        <p class="margin-top-05">This could include surveys that ask a set of identically worded questions with close-ended responses to participants.</p>
+        <ul class="usa-list">
+            <li>Example: <a class="usa-link--external" rel="noreferrer" target="_blank"
+                href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202203-3090-003&icID=258408">USWDS top tasks research study</a>
+            </li>
+        </ul>
+        <p><a class="usa-link text-bold" href="{{ '/get-pra-clearance/' | url }}">Learn how to get Fast Track clearance for your research.</a></p>
+        
+        <h3 class="margin-top-4">Larger-scale surveys are not eligible for the Fast Track process.</h3>
+        <h4 class="margin-bottom-05 text-base-dark">Any larger-scale research that implies statistical rigor or relates to the development of surveys, program effectiveness metrics, or outcome measures and program-level decision-making</h4>
+        <p class="margin-top-05">This kind of research will need PRA clearance, but will not be covered by the Fast Track process.</p>
+        <ul class="usa-list">
+            <li>Example: <a class="usa-link--external" rel="noreferrer" target="_blank"
+                href="https://www.reginfo.gov/public/do/PRAViewICR?ref_nbr=202401-3090-004">GSA equity study on remote identity proofing</a>
+            </li>
+        </ul>
+        <p>Please contact <a class="usa-link" href="mailto:GSARegSec@gsa.gov">GSARegSec@gsa.gov</a> and consult <a class="usa-link--external" rel="noreferrer" target="_blank" href="https://pra.digital.gov/">pra.digital.gov</a> for more information.</p>
+        
+        <h3 class="margin-top-4">Other methods</h3>
+        <h4 class="margin-bottom-05 text-base-dark">If you are planning to use another method not listed, please contact <a class="usa-link" href="mailto:tts-research@gsa.gov">tts-research@gsa.gov</a>.</h4>
+        <p>You can also consult the OMB CX Team's page <a class="usa-link usa-link--external" rel="noreferrer" target="_blank" href="https://community-dc.max.gov/x/yAYcmQ">"What type of CX research does not require PRA approval?"</a> (Requires login with PIV card.)</p>
     </section>
     <section class="usa-section examples-section border-section">
-        <h2 class="site-preview-heading">Examples</h2>
-        <p>The following are examples of common research activities that would likely need PRA clearance for recruitment, research, neither, or both.</p>
+        <h2 class="site-preview-heading margin-bottom-1" id="example-scenarios">Example scenarios</h2>
+        <h3>Common research scenarios and PRA implications</h3>
         <table class="usa-table usa-table--stacked">
             <thead>
                 <tr>
-                    <th scope="col">Description of research activities</th>
+                    <th scope="col">Description of research scenario</th>
                     <th scope="col">Needs PRA clearance for recruitment?</th>
                     <th scope="col">Needs PRA clearance for research?</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th data-label="Description of research activities" scope="row">
-                        [Name] is recruiting a few participants through word of mouth by connecting with a community organization they had previous contact with. They are planning to have unstructured conversations with 4-5 participants about whether they might find a new website feature useful or not.
+                    <th data-label="Description of research scenario" scope="row">
+                        A TTS UX Researcher is recruiting a few participants through word of mouth by connecting with a community organization they had previous contact with. They are planning to have unstructured conversations with 4-5 participants about whether they might find a new website feature useful or not.
                     </th>
                     <td data-label="Needs PRA clearance for recruitment?">
-                        NO
+                        <span class="text-bold">NO</span><br> (recruiting &lt;10 people)
                     </td>
                     <td data-label="Needs PRA clearance for research?">
-                        NO
+                        <span class="text-bold">NO</span><br> (&lt;10 people, unstructured conversation)
                     </td>
                 </tr>
                 <tr>
-                    <th data-label="Description of research activities" scope="row">
-                        [Name] needs to recruit 20-30 people that are representative of the US population and will send out a screener survey to some email listservs. They are planning to conduct moderated, non-standardized (open-ended) card sorting tests to get a better sense of people’s mental models.
+                    <th data-label="Description of research scenario" scope="row">
+                        A TTS Content Designer needs to recruit 20-30 people that are representative of the US population and will send out a screener survey asking demographic questions to some email listservs. They are planning to conduct moderated card sorting tests to get a better sense of participant's mental models.
                     </th>
                     <td data-label="Needs PRA clearance for recruitment?">
-                        YES
+                        <span class="text-bold">YES</span><br> (recruiting 10+ people w/ structured survey)
                     </td>
                     <td data-label="Needs PRA clearance for research?">
-                        NO
+                        <span class="text-bold">NO</span><br> (direct observation, unstructured conversation)
                     </td>
                 </tr>
                 <tr>
-                    <th data-label="Description of research activities" scope="row">
-                        [Name] is conducting an anonymous customer satisfaction survey (meaning they won’t collect any Personally Identifiable Information) and expects between 50-100 participants to fill it out.
+                    <th data-label="Description of research scenario" scope="row">
+                        A TTS Product Manager is conducting an anonymous customer satisfaction survey (meaning they won't collect any Personally Identifiable Information) and expects between 50-100 participants to fill it out.
                     </th>
                     <td data-label="Needs PRA clearance for recruitment?">
-                        NO
+                        <span class="text-bold">NO</span><br> (not collecting PII)
                     </td>
                     <td data-label="Needs PRA clearance for research?">
-                        YES
+                        <span class="text-bold">YES</span><br> (10+ members of the public, no direct observation, structured)
                     </td>
                 </tr>
                 <tr>
-                    <th data-label="Description of research activities" scope="row">
-                        [Name] needs to test the accessibility of their website and wants to recruit participants with and without disabilities. They are planning to conduct 12-15 moderated interviews and usability tests.  
+                    <th data-label="Description of research scenario" scope="row">
+                        A TTS UX Designer has to test the accessibility of their website and needs to recruit participants with and without disabilities. They are planning to conduct 12-15 usability tests (which will not require PRA clearance) and send a follow-up survey to participants afterwards (which will require PRA clearance).
                     </th>
                     <td data-label="Needs PRA clearance for recruitment?">
-                        YES
+                        <span class="text-bold">YES</span><br> (recruiting 10+ people)
                     </td>
                     <td data-label="Needs PRA clearance for research?">
-                        YES
+                        <span class="text-bold">YES</span><br> (for the structured survey, not for usability testing)
                     </td>
                 </tr>
             </tbody>
@@ -687,18 +524,12 @@ layout: layouts/page
     </section>
     {{ content }}
 </div>
-{% capture sliderjs %}
-{% include "_includes/theme/js/slider.js" %}
-{% endcapture %}
 
 {% capture praform %}
 {% include "_includes/theme/js/pra-form.js" %}
 {% endcapture %}
 
 <script>
-    // Slider script
-    {{ sliderjs | jsmin }}
-
     //PRA form script
     {{ praform | jsmin }}
 </script>

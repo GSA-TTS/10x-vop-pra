@@ -1,244 +1,310 @@
 ---
 layout: layouts/page
 ---
-
 <div class="get-pra-clearance-wrapper static-content">
-    <h1 class="margin-top-0">Get PRA clearance</h1>
-    <p>If you are ready to get PRA clearance, congratulations! We're here to walk you through the steps. If you are
-        still not sure whether you need PRA clearance for your research, please refer to the previous sections.</p>
-    <p><a href="{{ '#submit-fast-track-pra' | url }}" class="usa-link">If you are ready to submit a Fast Track PRA
-            clearance request, jump down to get started</a>. Otherwise, keep reading for more information.</p>
-    <section class="usa-section what-do-you-need-pra-for-section border-section">
-        <h2 class="site-preview-heading">PRA clearance for CX/UX work</h2>
+    <h1 class="margin-top-0">
+        <img src="{{ '/assets/images/ready-for-pra-icon-small.webp' | url }}" alt="" width="75" height="75" />
+        <span>Getting Fast Track PRA clearance</span>       
+    </h1>
+    <section class="usa-section information-about-fast-track-section border-section">
+        <h2 id="information-about-fast-track" class="site-preview-heading">Information about Fast Track</h2>
+        <h3>The Fast Track (A-11) PRA clearance process is designed for smaller-scale UX/CX research.</h3>
         <p>
             The <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                href="https://pra.digital.gov/clearance-process/">standard PRA clearance process</a> that you may have
-            heard about typically takes around 6-9 months; however, there is good news! <span class="text-italic">GSA
-                has several different types of PRA clearances that are designed specifically for conducting user
-                research with much faster turnaround times.</span>
+                href="https://pra.digital.gov/clearance-process/">standard PRA clearance process</a> that you may have heard about typically takes 6-9 months...however, there is good news! Researchers can request PRA clearance under generic "umbrella" clearances that are already in place, which allows for a much faster turnaround time. GSA has several types of PRA clearances that are designed specifically for UX/CX research:</span>
         </p>
-        <h3 class="margin-bottom-05">Clearance types</h3>
+        <ul class="usa-card-group clearance-types grid-row">
+            <li class="usa-card desktop:grid-col-6">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <p class="usa-card__heading text-bold">Generic Clearance</p>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/generic-clearance-icon.webp' | url }}" alt=""
+                                width="75" height="75" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p class="margin-top-05 text-bold text-indigo-cool-50">Designed for UX/CX surveys that will involve statistical analysis.</p>
+                        <p>This clearance covers:</p>
+                        <ul class="usa-list">
+                            <li>Customer satisfaction surveys</li>
+                            <li>Website usability surveys</li>
+                        </ul>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://www.reginfo.gov/public/do/PRAViewICR?ref_nbr=202310-3090-001">View <span
+                        class="usa-sr-only">generic</span> clearance</a>
+                    </div>
+                </div>
+            </li>
+            <li class="usa-card desktop:grid-col-6">
+                <div class="usa-card__container">
+                    <div class="usa-card__header">
+                        <p class="usa-card__heading text-bold">Fast Track (A-11)</p>
+                    </div>
+                    <div class="usa-card__media usa-card__media--inset">
+                        <div class="usa-card__img">
+                            <img aria-hidden="true" src="{{ '/assets/images/generic-clearance-icon.webp' | url }}" alt=""
+                                width="75" height="75" />
+                        </div>
+                    </div>
+                    <div class="usa-card__body">
+                        <p class="margin-top-05 text-bold text-indigo-cool-50">Designed for smaller-scale UX/CX research activities.</p>
+                        <p>This clearance covers:</p>
+                        <ul class="usa-list">
+                            <li>Discovery research</li>
+                            <li>User testing of services and digital products</li>
+                            <li>Customer feedback</li>
+                        </ul>
+                    </div>
+                    <div class="usa-card__footer">
+                        <a class="usa-button usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://www.reginfo.gov/public/do/PRAViewICR?ref_nbr=202208-3090-003">View <span
+                        class="usa-sr-only">Fast Track (A-11)</span> clearance</a>
+                    </div>
+                </div>
+            </li>         
+        </ul>
+        <p><span class="text-italic">Most UX/CX research activities at TTS can use the Fast Track (A-11) PRA clearance.</span> If you are conducting larger-scale UX/CX surveys that will involve statistical analysis or any other kind of research that may be a better fit for a different type of clearance, please contact <a href="mailto:tts-research@gsa.gov">tts-research@gsa.gov</a> for guidance on how to proceed.</p>
+    </section>
+    <section class="usa-section how-to-get-fast-track-clearance-section border-section">
+        <h2 id="how-to-get-fast-track-clearance" class="site-preview-heading">Step-by-step process to get Fast Track PRA clearance</h2>
+        <h3 class="margin-bottom-05">Timeline</h3>
+        <p class="margin-top-05">The entire process typically takes 7-14 business days. However, depending on the availability and capacity of the involved parties, the timeline may be slightly shorter or longer. Please plan ahead to the best of your ability!</p>
+        <h3 class="margin-bottom-05">Communication</h3>
+        <p class="margin-top-05">All communication and submission happens via email.</p>
+        <h3 class="margin-bottom-05">Contacts</h3>
         <table class="usa-table usa-table--stacked margin-bottom-4 margin-top-05">
             <thead>
                 <tr>
-                    <th scope="col">CX/UX PRA clearance type</th>
-                    <th scope="col">Purpose</th>
-                    <th scope="col">Timeline</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Contact information</th>
+                    <th scope="col">Responsibilities</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th data-label="CX/UX PRA clearance type" scope="row">
-                        <p class="text-bold text-primary margin-top-0">Generic Clearance</p>
-                        <p><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                                href="https://pra.digital.gov/clearance-types/#generic-clearance">Generic Clearance for
-                                the Collection of Qualitative Feedback on Agency Service Delivery (GSA)</a></p>
+                    <th data-label="Role" scope="row">
+                        <span class="text-bold text-primary text-indigo-cool-50">UX/CX Researcher</span>
                     </th>
-                    <td data-label="Purpose">
-                        <p class="text-bold text-primary margin-top-0">Designed for larger-scale UX/CX surveys that will
-                            involve statistical analysis.</p>
-                        <p>According to <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                                href="https://pra.digital.gov/clearance-types/#generic-clearance">pra.digital.gov</a>,
-                            <span class="text-italic">"generic clearances almost always involve statistical methods and
-                                analysis and most information collections are not appropriate for generic
-                                clearances."</span>
-                        </p>
-                        <p class="margin-bottom-05">Good fits for this type of clearance include:</p>
-                        <ul class="usa-list">
-                            <li>Customer satisfaction surveys</li>
-                            <li>Focus group tests</li>
-                            <li>Website usability surveys</li>
-                        </ul>
+                    <td data-label="Contact information">
+                        N/A
                     </td>
-                    <td data-label="Timeline">
-                        30-60 days
+                    <td data-label="Responsibilities">
+                        This is you! You are responsible for documenting your research plans and working with PRA Desk Officers to get clearance.
                     </td>
                 </tr>
                 <tr>
-                    <th data-label="CX/UX PRA clearance type" scope="row">
-                        <p class="text-bold text-primary margin-top-0">Generic Clearance: Fast-Track (A-11 Section 280)
-                        </p>
-                        <p><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                                href="https://www.reginfo.gov/public/do/PRAViewICR?ref_nbr=202208-3090-003">Generic
-                                Clearance for Improving GSA's Customer Experience (OMB Circular A-11, Section 280
-                                Implementation)</a></p>
+                    <th data-label="Role" scope="row">
+                        <span class="text-bold text-primary text-indigo-cool-50">OMB CX Team</span>
                     </th>
-                    <td data-label="Purpose">
-                        <p class="text-bold text-primary margin-top-0">Designed for smaller-scale UX/CX qualitative
-                            research activities.</p>
-                        <p class="text-italic">"The Agency will collect, analyze, and interpret information gathered
-                            through this generic clearance to identify services' accessibility, navigation, and use by
-                            customers, and make improvements in service delivery based on customer insights gathered
-                            through developing an understanding of the user experience interacting with Government."</p>
-                        <p class="margin-bottom-05">
-                            Under this request, three types of activities will be conducted to generate customer
-                            insights:
-                        </p>
-                        <ul class="usa-list">
-                            <li>Customer Research (e.g., User Persona and Journey Map Development)</li>
-                            <li>Customer Feedback (Satisfaction Survey)</li>
-                            <li>User Testing of Services and Digital Products</li>
-                        </ul>
+                    <td data-label="Contact information">
+                        <a class="usa-link--external" rel="noreferrer" target="_blank"
+                        href="https://community-dc.max.gov/x/8oRMmQ">View contact information for the OMB CX Team here.</a><br> (Login with PIV card required.)
                     </td>
-                    <td data-label="Timeline">
-                        7-14 days
+                    <td data-label="Responsibilities">
+                        The primary contact for the A-11 Section 280 process. They oversee all information collection requests under the A-11 Generic Information Collection (A-11 Gen IC) Umbrellas. They also work with the assigned OIRA Desk Officer to approve UX/CX research.
+                    </td>
+                </tr>
+                <tr>
+                    <th data-label="Role" scope="row">
+                        <span class="text-bold text-primary text-indigo-cool-50">GSA PRA Desk Officer(s)</span>
+                    </th>
+                    <td data-label="Contact information">
+                        <a class="usa-link" href="mailto:GSARegSec@gsa.gov">GSARegSec@gsa.gov</a>
+                    </td>
+                    <td data-label="Responsibilities">
+                        <span class="text-italic">**Please note that the role of the PRA Desk Officer may differ from agency to agency and this information is specific to GSA.**</span><br>
+                        They are responsible for entering information about PRA clearances into ROCIS, and can offer additional support throughout the process.
+                    </td>
+                </tr>
+                <tr>
+                    <th data-label="Role" scope="row">
+                        <span class="text-bold text-primary text-indigo-cool-50">OIRA PRA Desk Officer</span>
+                    </th>
+                    <td data-label="Contact information">
+                        You will not need to contact them directly
+                    </td>
+                    <td data-label="Responsibilities">
+                        They have final approval authority over all PRA clearance requests.
                     </td>
                 </tr>
             </tbody>
         </table>
-        <h3 class="margin-bottom-05">Using the Fast Track clearance process at TTS</h3>
-        <p class="margin-top-0">Because the Fast Track process was designed for smaller scale qualitative user research
-            activities, it is likely that you will be able to use this process as a user researcher at TTS. However, if
-            you are at all uncertain whether you can use this clearance type, or if you have any outstanding questions,
-            please contact <a href="mailto:Todd.W.Rubin2@omb.eop.gov">OMB's CX PRA Desk Officer</a> before beginning.
-        </p>
-        <h4 class="margin-bottom-05">Fast Track clearance process overview</h4>
-        <p class="margin-top-0">
-            <img aria-hidden="true" src="{{ '/assets/images/fast-track-process.webp' | url }}" alt="" width="863"
-                height="407" />
-        </p>
-        <div class="usa-alert usa-alert--info">
-            <div class="usa-alert__body">
-                <p class="usa-alert__heading text-bold margin-bottom-05">What is an ICR?</p>
-                <p class="margin-top-0 text-bold margin-bottom-05">ICR stands for "Information Collection Request"</p>
-                <p class="usa-alert__text margin-top-05">
-                    Information Collection Requests are what researchers submit when they need to get PRA clearance for
-                    their research. PRA clearances are granted to specific Information Collection Requests. In practice,
-                    researchers fill out an ICR form with the details of their research and attach any relevant
-                    documents to complete the ICR package, which then gets reviewed and approved by lawyers at OMB.
-                </p>
-            </div>
-        </div>
-        <h3 class="margin-bottom-05">Fast Track examples</h3>
-        <p class="margin-top-0">
-            The following are examples of research activities at TTS that have gotten clearance through the Fast Track
-            process:
-        </p>
-        <h4 class="margin-bottom-05">RECRUITMENT activities</h4>
-        <ul class="usa-list">
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202208-3090-003&icID=257585">Vote.gov UX
-                    Research Participant Signup List</a></li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202208-3090-003&icID=258147">Vote.gov UX
-                    Research Participant Signup List (Spanish)</a></li>
-        </ul>
-        <h4 class="margin-bottom-05">RESEARCH activities</h4>
-        <ul class="usa-list">
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202203-3090-003&icID=254453">Login.gov
-                    In-Person Proofing Follow Up Survey</a></li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202203-3090-003&icID=262344">Login.gov
-                    Remote Identity Verification Optional Survey Question</a></li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202203-3090-003&icID=252907">Usability
-                    Testing of Federal Forms to Reduce Burden, Enhance Data Quality, and Improve Access to Resources</a>
-            </li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202203-3090-003&icID=264458">USA.gov
-                    (HISP) Website Customer Satisfaction Feedback Surveys</a></li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202203-3090-003&icID=258408">USWDS Top
-                    Tasks Research Study - Customer Survey Feedback</a></li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202203-3090-003&icID=254448">User Testing
-                    for the Federal Audit Clearinghouse</a></li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202208-3090-003&icID=264606">IRS Direct
-                    File Post Submission Survey</a></li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202208-3090-003&icID=260359">Pre-engagement
-                    Assessment of WorkwithUSAID.org</a></li>
-            <li><a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
-                    href="https://www.reginfo.gov/public/do/PRAViewIC?ref_nbr=202208-3090-003&icID=260357">USAID Partner
-                    Directory User Experience</a></li>
-        </ul>
-        <h3>Additional considerations</h3>
-        <h4 class="margin-bottom-05">Working with a partner agency</h4>
-        <p class="margin-top-0">
-            If you are doing research on behalf of a partner agency, you should check with them first to determine
-            whether you should follow their PRA clearance process.
-        </p>
-        <h4 class="margin-bottom-05">Requesting PRA clearance for translated materials</h4>
-        <p class="margin-top-0">
-            You do need to get an additional PRA clearance for translated materials. However, simply follow the same
-            process outlined above and let OMB's CX PRA Desk Officer know that you are submitting a translation of
-            previously cleared materials.
-        </p>
-    </section>
-    <section id="submit-fast-track-pra" class="usa-section submit-fast-track-clearance-section">
-        <h2 class="site-preview-heading margin-top-0 margin-bottom-05">Submitting a Fast Track clearance request</h2>
-        <p class="margin-top-0">
-            Because the Fast Track process was designed for smaller scale qualitative user research activities, it is
-            likely that you will be able to use this process as a user researcher at TTS. However, if you are at all
-            uncertain whether you can use this clearance type, or if you have any outstanding questions, please contact
-            OMB's CX PRA Desk Officer before beginning.
-        </p>
-        <h3>What you can expect</h3>
-        <h4 class="margin-bottom-05">Timeline</h4>
-        <p class="margin-top-0">
-            The entire process typically takes 7-14 business days. However, depending on OMB PRA Reviewer's
-            availability, the timeline may be slightly shorter or longer. Please plan ahead to the best of your ability!
-        </p>
-        <h4 class="margin-bottom-05">Communication</h4>
-        <p class="margin-top-0">
-            All communication and submission happens via email.
-        </p>
-        <h3>Steps to submit a Fast Track clearance request</h3>
-        <p class="margin-bottom-4">
-            <a href="{{ '#download-template-modal' | url }}" class="usa-button" aria-controls="download-template-modal" data-open-modal>Download ICR form template</a>
-        </p>
-        <ol class="usa-list">
-            <li>Fill out an Information Collection Request (ICR) form for your research project.</li>
-            <li>Send the completed ICR form to OMB's CX PRA Desk Officer for pre-review.</li>
-            <li>Make any necessary edits to the form.</li>
-            <li>Submit finalized ICR form to GSA's PRA Desk Officer.</li>
-            <li>GSA's PRA Desk Officer will upload your ICR form in ROCIS.</li>
-            <li>OMB PRA Reviewer will receive your ICR form in ROCIS and approve it.</li>
-            <li>You will be notified when you receive approval by either the GSA PRA Desk Officer or the OMB PRA
-                Reviewer.</li>
-        </ol>
-    </section>
-    <div class="usa-modal radius-0 bg-primary-lighter" id="download-template-modal" aria-labelledby="modal-1-heading"
-        aria-describedby="modal-1-description">
-        <div class="usa-modal__content">
-            <div class="usa-modal__main text-center">
-                <h4 class="usa-modal__heading font-family-sans" id="modal-1-heading">
-                    ICR A-11 Section 280 Clearance Template
-                </h4>
-                <div class="usa-prose">
-                    <div id="modal-1-description">
-                        <p>Preview the form below or download if you are ready to fill it out.</p>
-                        <p class="margin-bottom-4">
-                            <a href="{{ '/assets/documents/ICR-Template_A11-Section-280-Clearance-v5-13-24.docx' | url }}" class="usa-button dynamic-base-url">Download template</a>
-                        </p>
-                        <!-- This iframe content only loads in the cloud and not locally because it's a relative path -->
-                        <iframe data-dynamic-src="{{ '/assets/documents/ICR-Template_A11-Section-280-Clearance-v5-13-24.docx' | url }}" width="100%" height="600"></iframe>
+        <h3 class="margin-bottom-2">Instructions</h3>
+        <div class="usa-accordion usa-accordion--multiselectable" data-allow-multiple>
+            <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="false"
+                    aria-controls="documentation">
+                    1. Documentation
+                </button>
+            </h3>
+            <div id="documentation" class="usa-accordion__content usa-prose">
+                <p class="text-bold margin-bottom-05">Download the Generic A-11 Information Collection Review (ICR) template and complete it for your research project.</p>
+                <ul class="usa-list">
+                    <li>Download the form below OR launch the ICR Form Builder to create and ICR form (you do not need to do both).</li>
+                </ul>
+                <p class="text-bold margin-bottom-05">Attach all completed instruments (forms, surveys, etc.), instructions and scripts to this document to create the Gen IC package.</p>
+                <ul class="usa-list">
+                    <li>Google forms is an allowed platform for public participant recruiting screeners and UX/CX research in GSA.
+                        
+                        <ul class="usa-list">
+                            <li>It is recommended to send Word documents or screenshots for ease of use in providing feedback to submitted materials, as the OMB CX team cannot access Google links.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Apply the <a class="usa-link usa-link--external" rel="noreferrer" target="_blank" href="https://community-dc.max.gov/display/Performance/List+of+Departments+with+A-11+Umbrella+Clearance+for+CX+Research">GSA OMB control number found here</a> (PIV card login required) to all instruments.
+                       
+                        <ul class="usa-list">
+                            <li>Use the "GSA Touchpoints" control number if using a Touchpoints form; otherwise use the generic GSA control number. Contact <a href="mailto:GSARegSec@gsa.gov">GSARegSec@gsa.gov</a> for support if necessary.</li>
+                        </ul>                     
+                    </li>
+                </ul>
+                <p class="text-bold margin-bottom-05">To avoid common mistakes, please consult the OMB CX Team's <a class="usa-link usa-link--external" rel="noreferrer" target="_blank" href="https://community-dc.max.gov/display/Performance/GUIDE+TO+NAVIGATING+THE+A-11+UMBRELLA+CLEARANCE+APPROVAL+PROCESS+FOR+CX+RESEARCH#GUIDETONAVIGATINGTHEA11UMBRELLACLEARANCEAPPROVALPROCESSFORCXRESEARCH-HowdoIfinalizemyinformationcollectioninstrument?">tips on how to finalize the template</a> (PIV card login required).</p>
+
+                <div class="grid-row icr-links text-center">
+                    <div class="tablet:grid-col-5">
+                        <div class="content-row height-full">
+                            <img src="{{ '/assets/images/download-icon.webp' | url }}" alt="" width="50" height="50" />
+                            <a class="usa-button" href="{{ '/assets/documents/ICR-Template_A11-Section-280-Clearance-v5-13-24-original.docx' | url }}" >Download ICR template</a>
+                        </div>
                     </div>
-                </div>
+                    <div class="tablet:grid-col-2">
+                        <div class="height-full display-inline-block text-middle">
+                            <span class="text-bold vertical-center">OR</span>
+                        </div>
+                    </div>
+                    <div class="tablet:grid-col-5">
+                        <div class="content-row height-full">
+                            <img src="{{ '/assets/images/external-link-icon.webp' | url }}" alt="" width="50" height="50" />
+                            <a class="usa-button" href="{{ '/icr-form-builder/' | url }}">Launch ICR Form Builder</a>
+                        </div>
+                    </div>
+                </div>               
             </div>
-            <button type="button" class="usa-button usa-modal__close" aria-label="Close this window" data-close-modal>
-                <svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
-                    <use xlink:href="{{ '/assets/uswds/img/sprite.svg#close' | url }}"></use>
-                </svg>
-            </button>
+
+            <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="false"
+                    aria-controls="preview">
+                    2. Pre-review
+                </button>
+            </h3>
+            <div id="preview" class="usa-accordion__content usa-prose">
+                <p class="text-bold margin-bottom-05">If you would like the OMB CX Team to pre-review your Generic Information Collection (Gen IC) package (including template and all instruments, instructions, and scripts), email it to the OMB CX Team for pre-review.</p>
+                <ul class="usa-list">
+                    <li>They will suggest edits within the document and make sure the Gen IC package is complete.</li>
+                    <li><a class="usa-link--external" rel="noreferrer" target="_blank" href="https://community-dc.max.gov/x/8oRMmQ">View OMB CX Team contact information here</a> (PIV card login required).</li>
+                    <li>You should also cc the GSA PRA Desk (<a class="usa-link" href="mailto:GSARegSec@gsa.gov">GSARegSec@gsa.gov</a>).</li>
+                </ul>
+                <p class="text-bold margin-bottom-05">Make any necessary edits to finalize submission.</p>
+                <ul class="usa-list">
+                    <li>Double check with the OMB CX Team if necessary.</li>
+                </ul>          
+            </div>
+
+            <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="false"
+                    aria-controls="submission">
+                    3. Submission
+                </button>
+            </h3>
+            <div id="submission" class="usa-accordion__content usa-prose">
+                <p class="text-bold ">Email your finalized Gen IC package to the GSA PRA Desk (cc'ing OMB CX Team).</p>
+                <p class="text-bold margin-bottom-05">GSA PRA Desk will upload your Gen IC package into ROCIS.</p>
+                <ul class="usa-list">
+                    <li>They will suggest edits within the document and make sure the Gen IC package is complete.</li>
+                </ul>
+                <p class="text-bold margin-bottom-05">Make any necessary edits to finalize submission.</p>
+                <ul class="usa-list">
+                    <li>ROCIS is the electronic management system where information collection data gets uploaded and filed. You will not have to interface with this system.</li>
+                </ul>          
+            </div>
+
+            <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="false"
+                    aria-controls="review">
+                    4. Review
+                </button>
+            </h3>
+            <div id="review" class="usa-accordion__content usa-prose">
+                <p class="text-bold margin-bottom-05">OMB CX Team receives Gen IC package in ROCIS and reviews it.</p>
+                <ul class="usa-list">
+                    <li>OMB CX Team will enter the decision into ROCIS.</li>
+                    <li>GSA PRA Desk is automatically notified of approval through ROCIS.</li>
+                </ul>      
+            </div>
+
+            <h3 class="usa-accordion__heading">
+                <button type="button" class="usa-accordion__button" aria-expanded="false"
+                    aria-controls="approval">
+                    5. Approval
+                </button>
+            </h3>
+            <div id="approval" class="usa-accordion__content usa-prose">
+                <p class="text-bold margin-bottom-05">OMB CX PRA Team will notify you of the decision by email.</p>
+                <ul class="usa-list">
+                    <li>If denied, you must repeat the process.</li>
+                    <li>If approved, you may proceed with research!</li>
+                </ul>      
+            </div>
         </div>
-    </div>
+    </section>
+    <section class="usa-section submit-fast-track-clearance-section border-section">
+        <h2 id="making-changes-to-approved-research" class="site-preview-heading margin-top-0">Making changes after receiving PRA clearance</h2>
+        <h3>You <span class="text-italic">do not</span> need to repeat the approval process if you are making <span class="text-italic">de minimus</span> changes (<a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+            href="https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/11/PRA-Usability-Testing-Guidance-Memo.pdf">more information</a>).</h3>
+        <p class="margin-bottom-05">These are changes that affect only the look and feel (design improvements or minor plain language edits that do not change the nature or type of information collected and do not increase burden on the public). Examples include:</p>
+        <ul class="usa-list">
+            <li>Color</li>
+            <li>Visual layout</li>
+            <li>Reordering instructions</li>
+            <li>Correcting grammar or framing questions in plain language</li>
+            <li>Fixing an address or phone number</li>
+            <li>Making a field or option more prominent</li>
+            <li>Updating an icon</li>
+        </ul>
+
+        <h3>"Non-substantive" changes should be submitted for approval<br> (<a class="usa-link usa-link--external" rel="noreferrer" target="_blank" href="https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/11/PRA-Usability-Testing-Guidance-Memo.pdf">more information</a>).</h3>
+        <p>Non-substantive changes are those that do not introduce new concepts or have new intended uses for the data being collected that go beyond what was described in the original approval. <span class="text-bold">However, once you submit them, they generally get them approved within days.</span></p>
+
+        <h3>If you need to amend the instrument or number of burden hours, you must repeat the above process to get approval for the changes.</h3>
+        <p>If you need to make substantive changes, work with the OMB CX Team and GSA PRA Desk to do so.</p>
+    </section>
+    <section class="usa-section clearance-for-multilingual-research-section border-section">
+        <h2 id="clearance-for-multilingual-research" class="site-preview-heading margin-top-0">PRA clearance for multilingual UX/CX research.</h2>
+        <h3>If your UX/CX research requires PRA clearance, so will the same research in a different language.</h3>
+        <p>However, you can submit these forms as a package together with the English version to be reviewed simultaneously, so the process should not take additional time.</p>
+        <p>If you have previously gotten PRA clearance for UX/CX research in English and now need to get clearance for a the same research in a different language, simply let the OMB CX PRA Desk Officer know, and <a class="usa-link" href="{{ '#how-to-get-fast-track-clearance' | url }}">follow the steps to submit a new ICR template</a> with the translated instruments attached.</p>
+    </section>
+
+    <section class="usa-section working-with-a-partner-agency-section border-section">
+        <h2 id="working-with-a-partner-agency" class="site-preview-heading margin-top-0">Working with a partner agency.</h2>
+        <h3>If your partner agency has an umbrella Fast Track (A-11) clearance in place:</h3>
+        <h4 class="text-base">Check to see if your partner agency already has a "Generic Clearance for Improving Customer Experience (OMB Circular A-11, Section 280 Implementation)" in place that will allow them to use the Fast Track process.</h4>
+        <ul class="usa-list">
+            <li>All <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+                href="https://www.performance.gov/cx/hisps/">High Impact Service Providers (HISPs)</a> should already have the proper clearance in place because they use it for mandatory reporting.</li>
+            <li>For non-HISPs, you can check by going to <a class="usa-link usa-link--external" rel="noreferrer" target="_blank"
+                href="https://www.reginfo.gov/public/do/PRASearch">RegInfo.gov</a>, choosing your partner agency from the drop down and searching "A-11 Section 280" in the text search field (see screenshot below).</li>
+        </ul>
+        <p>
+            <img src="{{ '/assets/images/reginfo-screenshot.webp' | url }}" alt="Screenshot of reginfo.gov" width="574" height="433" />
+        </p>
+        <h3>If your partner agency <span class="text-italic">does not</span> have an umbrella Fast Track (A-11) clearance in place:</h3>
+        <h4 class="text-base">If your partner agency <span class="text-italic">does not</span> have the "Generic Clearance for Improving Customer Experience (OMB Circular A-11, Section 280 Implementation)" in place, you have the following options:</h4>
+        <p class="text-bold margin-bottom-05 text-indigo-cool-50">You can advocate for them to go through a longer 6-9 month process to get the proper umbrella Fast Track clearance in place.</p>
+        <ul class="usa-list">
+            <li>This is a good option if being able to go through the Fast Track process would make sense for the agency in the long term and they are willing to do so.</li>
+            <li>Please reach out to <a href="mailto:tts-research@gsa.gov">tts-research@gsa.gov</a>, the OMB CX Team, and the partner agency's PRA Desk for help initiating the process. </li>
+        </ul>
+        <p class="text-bold margin-bottom-05 text-indigo-cool-50">If getting an umbrella Fast Track clearance in process is not an option, you can use GSA's umbrella Fast Track clearance for the duration of your engagement.</p>
+        <ul class="usa-list">
+            <li>This will cover any research that you (as a GSA researcher) conduct.</li>
+            <li>However, please make sure that your partner understands they will not be able to conduct the research themselves via the Fast Track process.</li>
+        </ul>
+    </section>
     {{ content }}
 </div>
-{% capture modalFixJs %}
-{% include "_includes/theme/js/modalFix.js" %}
-{% endcapture %}
-
-{% capture baseUrl %}
-{% include "_includes/theme/js/base-url.js" %}
-{% endcapture %}
-
-<script>
-    // Modal Fix
-    {{ modalFixJs | jsmin }}
-
-    // Base URL
-    {{ baseUrl | jsmin }}
-</script>
